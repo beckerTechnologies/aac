@@ -49,7 +49,7 @@ ActiveRecord::Schema.define(version: 20140417040058) do
     t.text     "city"
     t.text     "state"
     t.text     "zip"
-    t.integer  "phone_number"
+    t.text     "phone_number"
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"

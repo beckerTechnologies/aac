@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration
       t.text :city
       t.text :state
       t.text :zip
-      t.integer :phone_number
+      t.text :phone_number
       t.boolean :admin
 
       t.timestamps
