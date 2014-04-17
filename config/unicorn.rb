@@ -1,4 +1,4 @@
-# config/unicorn.rb
+#worker_processes 3
 worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
 timeout 30
 preload_app true
@@ -10,7 +10,7 @@ before_fork do |server, worker|
   end
 
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.connection.disconnect!
+  ActiveRecord::Base.connection.disconnect!
 end
 
 after_fork do |server, worker|
@@ -19,14 +19,5 @@ after_fork do |server, worker|
   end
 
   defined?(ActiveRecord::Base) and
-    ActiveRecord::Base.establish_connection
-end
-
-after_fork do |server, worker|
-  Sidekiq.configure_client do |config|
-    config.redis = { :size => 1 }
-  end
-  Sidekiq.configure_server do |config|
-    config.redis = { :size => 5 }
-  end
+  ActiveRecord::Base.establish_connection
 end
