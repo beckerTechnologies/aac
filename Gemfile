@@ -3,9 +3,11 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-gem 'pg'
+gem 'pg'				## PostgreSQL DB
 
-gem 'devise'
+gem 'devise'			## For authenticating users
+
+gem 'unicorn'			## Webserver for Heroku
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
