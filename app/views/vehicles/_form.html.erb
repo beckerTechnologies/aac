@@ -1,0 +1,329 @@
+<%= form_for(@vehicle) do |f| %>
+  <% if @vehicle.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+
+      <ul>
+      <% @vehicle.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :dealer_id %><br>
+    <%= f.number_field :dealer_id %>
+  </div>
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :year %><br>
+    <%= f.number_field :year %>
+  </div>
+  <div class="field">
+    <%= f.label :make %><br>
+    <%= f.text_field :make %>
+  </div>
+  <div class="field">
+    <%= f.label :model %><br>
+    <%= f.text_field :model %>
+  </div>
+  <div class="field">
+    <%= f.label :stock_no %><br>
+    <%= f.text_field :stock_no %>
+  </div>
+  <div class="field">
+    <%= f.label :vin_id %><br>
+    <%= f.text_field :vin_id %>
+  </div>
+  <div class="field">
+    <%= f.label :exterior_color %><br>
+    <%= f.text_field :exterior_color %>
+  </div>
+  <div class="field">
+    <%= f.label :interior_color %><br>
+    <%= f.text_field :interior_color %>
+  </div>
+  <div class="field">
+    <%= f.label :including_actual_miles %><br>
+    <%= f.text_field :including_actual_miles %>
+  </div>
+  <div class="field">
+    <%= f.label :not_lncluding_actual_miles %><br>
+    <%= f.text_field :not_lncluding_actual_miles %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_total_cost_of_repair %><br>
+    <%= f.text_field :estimated_total_cost_of_repair %>
+  </div>
+  <div class="field">
+    <%= f.label :inspection_revealed_safety_issues %><br>
+    <%= f.check_box :inspection_revealed_safety_issues %>
+  </div>
+  <div class="field">
+    <%= f.label :inspection_revealed_safety_issues_details %><br>
+    <%= f.text_area :inspection_revealed_safety_issues_details %>
+  </div>
+  <div class="field">
+    <%= f.label :inspection_revealed_frame_damage %><br>
+    <%= f.check_box :inspection_revealed_frame_damage %>
+  </div>
+  <div class="field">
+    <%= f.label :inspection_revealed_frame_damage_details %><br>
+    <%= f.text_area :inspection_revealed_frame_damage_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_a %><br>
+    <%= f.check_box :sec_7_1_a %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_a_details %><br>
+    <%= f.text_area :sec_7_1_a_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_b %><br>
+    <%= f.check_box :sec_7_1_b %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_b_details %><br>
+    <%= f.text_area :sec_7_1_b_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_c %><br>
+    <%= f.check_box :sec_7_1_c %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_c_details %><br>
+    <%= f.text_area :sec_7_1_c_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_d %><br>
+    <%= f.check_box :sec_7_1_d %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_1_d_details %><br>
+    <%= f.text_area :sec_7_1_d_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_a %><br>
+    <%= f.check_box :sec_7_2_a %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_a_details %><br>
+    <%= f.text_area :sec_7_2_a_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_b %><br>
+    <%= f.check_box :sec_7_2_b %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_b_details %><br>
+    <%= f.text_area :sec_7_2_b_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_c %><br>
+    <%= f.check_box :sec_7_2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_c_details %><br>
+    <%= f.text_area :sec_7_2_c_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_d %><br>
+    <%= f.check_box :sec_7_2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_d_details %><br>
+    <%= f.text_area :sec_7_2_d_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_a %><br>
+    <%= f.check_box :sec_7_2_a %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_a_details %><br>
+    <%= f.text_area :sec_7_2_a_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_b %><br>
+    <%= f.check_box :sec_7_2_b %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_b_details %><br>
+    <%= f.text_area :sec_7_2_b_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_c %><br>
+    <%= f.check_box :sec_7_2_c %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_c_details %><br>
+    <%= f.text_area :sec_7_2_c_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_d %><br>
+    <%= f.check_box :sec_7_2_d %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_d_details %><br>
+    <%= f.text_area :sec_7_2_d_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_e %><br>
+    <%= f.check_box :sec_7_2_e %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_e_details %><br>
+    <%= f.text_area :sec_7_2_e_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_f %><br>
+    <%= f.check_box :sec_7_2_f %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_f_details %><br>
+    <%= f.text_area :sec_7_2_f_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_g %><br>
+    <%= f.check_box :sec_7_2_g %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_g_details %><br>
+    <%= f.text_area :sec_7_2_g_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_h %><br>
+    <%= f.check_box :sec_7_2_h %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_h_details %><br>
+    <%= f.text_area :sec_7_2_h_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_i %><br>
+    <%= f.check_box :sec_7_2_i %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_i_details %><br>
+    <%= f.text_area :sec_7_2_i_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_j %><br>
+    <%= f.check_box :sec_7_2_j %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_2_j_details %><br>
+    <%= f.text_area :sec_7_2_j_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_a %><br>
+    <%= f.check_box :sec_7_3_a %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_a_details %><br>
+    <%= f.text_area :sec_7_3_a_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_b %><br>
+    <%= f.check_box :sec_7_3_b %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_b_details %><br>
+    <%= f.text_area :sec_7_3_b_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_c %><br>
+    <%= f.check_box :sec_7_3_c %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_c_details %><br>
+    <%= f.text_area :sec_7_3_c_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_d %><br>
+    <%= f.check_box :sec_7_3_d %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_d_details %><br>
+    <%= f.text_area :sec_7_3_d_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_e %><br>
+    <%= f.check_box :sec_7_3_e %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_e_details %><br>
+    <%= f.text_area :sec_7_3_e_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_f %><br>
+    <%= f.check_box :sec_7_3_f %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_f_details %><br>
+    <%= f.text_area :sec_7_3_f_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_g %><br>
+    <%= f.check_box :sec_7_3_g %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_3_g_details %><br>
+    <%= f.text_area :sec_7_3_g_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_4 %><br>
+    <%= f.check_box :sec_7_4 %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_4_details %><br>
+    <%= f.text_area :sec_7_4_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_5 %><br>
+    <%= f.check_box :sec_7_5 %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_5_details %><br>
+    <%= f.text_area :sec_7_5_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_6 %><br>
+    <%= f.check_box :sec_7_6 %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_6_details %><br>
+    <%= f.text_area :sec_7_6_details %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_7 %><br>
+    <%= f.check_box :sec_7_7 %>
+  </div>
+  <div class="field">
+    <%= f.label :sec_7_7_details %><br>
+    <%= f.text_area :sec_7_7_details %>
+  </div>
+  <div class="field">
+    <%= f.label :estimated_total_cost_for_repairs %><br>
+    <%= f.number_field :estimated_total_cost_for_repairs %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_inspection %><br>
+    <%= f.date_select :date_of_inspection %>
+  </div>
+  <div class="field">
+    <%= f.label :calculation_and_total_cost_for_inspection %><br>
+    <%= f.number_field :calculation_and_total_cost_for_inspection %>
+  </div>
+  <div class="field">
+    <%= f.label :total_cost %><br>
+    <%= f.number_field :total_cost %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

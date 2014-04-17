@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Aac</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="logged-in">
+		<% if user_signed_in? %>
+			Signed in as <SPAN id="top-username"> <%= current_user.username %> </SPAN>. Not you?
+			<%= link_to "Sign out", destroy_user_session_path %>
+		<% end %>
+	</div>
+
+	<p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+
+<%= yield %>
+
+</body>
+</html>
