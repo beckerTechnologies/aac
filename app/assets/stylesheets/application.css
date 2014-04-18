@@ -11,3 +11,35 @@
  *= require_self
  *= require_tree .
  */
+
+
+ * {
+  font-family: georgia;
+}
+
+body {
+  background-color: #F0ECEB;
+  width: 100%;
+}
+
+.wrapper {
+	width: 80%;
+	border: 1px solid black;
+	margin: 0 auto 0 auto;
+	padding: 0 5% 0 5%;
+}
+
+
+/*----------------------------------------- Nav Bar -----------------------------------------*/
+
+.nav_bar {
+	height: 5%;
+	margin: 0 auto 7% auto;
+}
+
+.nav_bar li{
+	float: left;
+	padding: 1%;
+	list-style: none;
+	font-size: 200%;
+}

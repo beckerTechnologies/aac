@@ -12,9 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :dealer_id %><br>
-    <%= f.number_field :dealer_id %>
-  </div>
+  <%= f.label :dealer_id %><br />
+  <%= f.select( :dealer_id,  Dealer.all.map {|u| [u.name,u.id]}, {:include_blank => "Select a Dealer"}) %></div>
   <div class="field">
     <%= f.label :user_id %><br>
     <%= f.text_field :user_id %>

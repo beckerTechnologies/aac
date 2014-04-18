@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
 
 	has_many :vehicles
-	has_many :dealers
 	belongs_to :role
 
   # Include default devise modules. Others available are:

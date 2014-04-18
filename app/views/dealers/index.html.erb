@@ -3,7 +3,6 @@
 <table>
   <thead>
     <tr>
-      <th>User</th>
       <th>Name</th>
       <th>License number</th>
       <th>Address</th>
@@ -19,7 +18,6 @@
   <tbody>
     <% @dealers.each do |dealer| %>
       <tr>
-        <td><%= dealer.user_id %></td>
         <td><%= dealer.name %></td>
         <td><%= dealer.license_number %></td>
         <td><%= dealer.address %></td>

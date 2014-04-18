@@ -17,7 +17,6 @@ ActiveRecord::Schema.define(version: 20140417040058) do
   enable_extension "plpgsql"
 
   create_table "dealers", force: true do |t|
-    t.integer  "user_id"
     t.text     "name"
     t.text     "license_number"
     t.text     "address"

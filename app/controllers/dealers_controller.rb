@@ -1,5 +1,6 @@
 class DealersController < ApplicationController
   before_action :set_dealer, only: [:show, :edit, :update, :destroy]
+  before_filter :authenticate_user!
 
   # GET /dealers
   # GET /dealers.json
@@ -69,6 +70,6 @@ class DealersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def dealer_params
-      params.require(:dealer).permit(:user_id, :name, :license_number, :address, :city, :state, :zip)
+      params.require(:dealer).permit(:name, :license_number, :address, :city, :state, :zip)
     end
 end

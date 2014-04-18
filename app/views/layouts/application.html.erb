@@ -8,18 +8,34 @@
 </head>
 <body>
 
-	<div id="logged-in">
+	<div class="logged-in">
 		<% if user_signed_in? %>
 			Signed in as <SPAN id="top-username"> <%= current_user.email %> </SPAN>. Not you?
 			<%= link_to "Sign out", destroy_user_session_path %>
 		<% end %>
 	</div>
 
+	<div class="nav_bar">
+		<ul>
+			<li><a href="/dashboard/index">Home </a></li>
+			<li><a href="/vehicles/new">New Inspection</a> </li>
+			<li><a href="/vehicles/">Resume Inspection</a></li>
+			<li><a href="">Search Reports</a> </li>
+			<li><a href="/dealers/">Add Dealer</a></li>
+			<li><a href="">Contacts</a> </li>
+			<li><a href="">Forms and Contracts</a> </li>		
+		</ul>
+	</div>
+
+	<div class="wrapper">
+
 	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
 
 <%= yield %>
+
+	</div>
 
 </body>
 </html>
