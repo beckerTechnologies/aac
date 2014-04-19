@@ -3,84 +3,9 @@
 <table>
   <thead>
     <tr>
-      <th>Dealer</th>
-      <th>User</th>
-      <th>Year</th>
-      <th>Make</th>
-      <th>Model</th>
-      <th>Stock no</th>
-      <th>Vin</th>
-      <th>Exterior color</th>
-      <th>Interior color</th>
-      <th>Including actual miles</th>
-      <th>Not lncluding actual miles</th>
-      <th>Estimated total cost of repair</th>
-      <th>Inspection revealed safety issues</th>
-      <th>Inspection revealed safety issues details</th>
-      <th>Inspection revealed frame damage</th>
-      <th>Inspection revealed frame damage details</th>
-      <th>Sec 7 1 a</th>
-      <th>Sec 7 1 a details</th>
-      <th>Sec 7 1 b</th>
-      <th>Sec 7 1 b details</th>
-      <th>Sec 7 1 c</th>
-      <th>Sec 7 1 c details</th>
-      <th>Sec 7 1 d</th>
-      <th>Sec 7 1 d details</th>
-      <th>Sec 7 2 a</th>
-      <th>Sec 7 2 a details</th>
-      <th>Sec 7 2 b</th>
-      <th>Sec 7 2 b details</th>
-      <th>Sec 7 2 c</th>
-      <th>Sec 7 2 c details</th>
-      <th>Sec 7 2 d</th>
-      <th>Sec 7 2 d details</th>
-      <th>Sec 7 2 a</th>
-      <th>Sec 7 2 a details</th>
-      <th>Sec 7 2 b</th>
-      <th>Sec 7 2 b details</th>
-      <th>Sec 7 2 c</th>
-      <th>Sec 7 2 c details</th>
-      <th>Sec 7 2 d</th>
-      <th>Sec 7 2 d details</th>
-      <th>Sec 7 2 e</th>
-      <th>Sec 7 2 e details</th>
-      <th>Sec 7 2 f</th>
-      <th>Sec 7 2 f details</th>
-      <th>Sec 7 2 g</th>
-      <th>Sec 7 2 g details</th>
-      <th>Sec 7 2 h</th>
-      <th>Sec 7 2 h details</th>
-      <th>Sec 7 2 i</th>
-      <th>Sec 7 2 i details</th>
-      <th>Sec 7 2 j</th>
-      <th>Sec 7 2 j details</th>
-      <th>Sec 7 3 a</th>
-      <th>Sec 7 3 a details</th>
-      <th>Sec 7 3 b</th>
-      <th>Sec 7 3 b details</th>
-      <th>Sec 7 3 c</th>
-      <th>Sec 7 3 c details</th>
-      <th>Sec 7 3 d</th>
-      <th>Sec 7 3 d details</th>
-      <th>Sec 7 3 e</th>
-      <th>Sec 7 3 e details</th>
-      <th>Sec 7 3 f</th>
-      <th>Sec 7 3 f details</th>
-      <th>Sec 7 3 g</th>
-      <th>Sec 7 3 g details</th>
-      <th>Sec 7 4</th>
-      <th>Sec 7 4 details</th>
-      <th>Sec 7 5</th>
-      <th>Sec 7 5 details</th>
-      <th>Sec 7 6</th>
-      <th>Sec 7 6 details</th>
-      <th>Sec 7 7</th>
-      <th>Sec 7 7 details</th>
-      <th>Estimated total cost for repairs</th>
-      <th>Date of inspection</th>
-      <th>Calculation and total cost for inspection</th>
-      <th>Total cost</th>
+      <th>Deadler</th>
+      <th>User is</th>
+      <th>Vehicle</th>
       <th></th>
       <th></th>
       <th></th>
@@ -90,84 +15,9 @@
   <tbody>
     <% @inspections.each do |inspection| %>
       <tr>
-        <td><%= inspection.dealer_id %></td>
-        <td><%= inspection.user_id %></td>
-        <td><%= inspection.year %></td>
-        <td><%= inspection.make %></td>
-        <td><%= inspection.model %></td>
-        <td><%= inspection.stock_no %></td>
-        <td><%= inspection.vin_id %></td>
-        <td><%= inspection.exterior_color %></td>
-        <td><%= inspection.interior_color %></td>
-        <td><%= inspection.including_actual_miles %></td>
-        <td><%= inspection.not_lncluding_actual_miles %></td>
-        <td><%= inspection.estimated_total_cost_of_repair %></td>
-        <td><%= inspection.inspection_revealed_safety_issues %></td>
-        <td><%= inspection.inspection_revealed_safety_issues_details %></td>
-        <td><%= inspection.inspection_revealed_frame_damage %></td>
-        <td><%= inspection.inspection_revealed_frame_damage_details %></td>
-        <td><%= inspection.sec_7_1_a %></td>
-        <td><%= inspection.sec_7_1_a_details %></td>
-        <td><%= inspection.sec_7_1_b %></td>
-        <td><%= inspection.sec_7_1_b_details %></td>
-        <td><%= inspection.sec_7_1_c %></td>
-        <td><%= inspection.sec_7_1_c_details %></td>
-        <td><%= inspection.sec_7_1_d %></td>
-        <td><%= inspection.sec_7_1_d_details %></td>
-        <td><%= inspection.sec_7_2_a %></td>
-        <td><%= inspection.sec_7_2_a_details %></td>
-        <td><%= inspection.sec_7_2_b %></td>
-        <td><%= inspection.sec_7_2_b_details %></td>
-        <td><%= inspection.sec_7_2_c %></td>
-        <td><%= inspection.sec_7_2_c_details %></td>
-        <td><%= inspection.sec_7_2_d %></td>
-        <td><%= inspection.sec_7_2_d_details %></td>
-        <td><%= inspection.sec_7_2_a %></td>
-        <td><%= inspection.sec_7_2_a_details %></td>
-        <td><%= inspection.sec_7_2_b %></td>
-        <td><%= inspection.sec_7_2_b_details %></td>
-        <td><%= inspection.sec_7_2_c %></td>
-        <td><%= inspection.sec_7_2_c_details %></td>
-        <td><%= inspection.sec_7_2_d %></td>
-        <td><%= inspection.sec_7_2_d_details %></td>
-        <td><%= inspection.sec_7_2_e %></td>
-        <td><%= inspection.sec_7_2_e_details %></td>
-        <td><%= inspection.sec_7_2_f %></td>
-        <td><%= inspection.sec_7_2_f_details %></td>
-        <td><%= inspection.sec_7_2_g %></td>
-        <td><%= inspection.sec_7_2_g_details %></td>
-        <td><%= inspection.sec_7_2_h %></td>
-        <td><%= inspection.sec_7_2_h_details %></td>
-        <td><%= inspection.sec_7_2_i %></td>
-        <td><%= inspection.sec_7_2_i_details %></td>
-        <td><%= inspection.sec_7_2_j %></td>
-        <td><%= inspection.sec_7_2_j_details %></td>
-        <td><%= inspection.sec_7_3_a %></td>
-        <td><%= inspection.sec_7_3_a_details %></td>
-        <td><%= inspection.sec_7_3_b %></td>
-        <td><%= inspection.sec_7_3_b_details %></td>
-        <td><%= inspection.sec_7_3_c %></td>
-        <td><%= inspection.sec_7_3_c_details %></td>
-        <td><%= inspection.sec_7_3_d %></td>
-        <td><%= inspection.sec_7_3_d_details %></td>
-        <td><%= inspection.sec_7_3_e %></td>
-        <td><%= inspection.sec_7_3_e_details %></td>
-        <td><%= inspection.sec_7_3_f %></td>
-        <td><%= inspection.sec_7_3_f_details %></td>
-        <td><%= inspection.sec_7_3_g %></td>
-        <td><%= inspection.sec_7_3_g_details %></td>
-        <td><%= inspection.sec_7_4 %></td>
-        <td><%= inspection.sec_7_4_details %></td>
-        <td><%= inspection.sec_7_5 %></td>
-        <td><%= inspection.sec_7_5_details %></td>
-        <td><%= inspection.sec_7_6 %></td>
-        <td><%= inspection.sec_7_6_details %></td>
-        <td><%= inspection.sec_7_7 %></td>
-        <td><%= inspection.sec_7_7_details %></td>
-        <td><%= inspection.estimated_total_cost_for_repairs %></td>
-        <td><%= inspection.date_of_inspection %></td>
-        <td><%= inspection.calculation_and_total_cost_for_inspection %></td>
-        <td><%= inspection.total_cost %></td>
+        <td><%= inspection.deadler_id %></td>
+        <td><%= inspection.user_is %></td>
+        <td><%= inspection.vehicle_id %></td>
         <td><%= link_to 'Show', inspection %></td>
         <td><%= link_to 'Edit', edit_inspection_path(inspection) %></td>
         <td><%= link_to 'Destroy', inspection, method: :delete, data: { confirm: 'Are you sure?' } %></td>

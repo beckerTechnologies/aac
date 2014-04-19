@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Inspection:</strong>
+  <%= @response.inspection_id %>
+</p>
+
+<p>
+  <strong>Section:</strong>
+  <%= @response.section_id %>
+</p>
+
+<p>
+  <strong>Check:</strong>
+  <%= @response.check %>
+</p>
+
+<p>
+  <strong>Details:</strong>
+  <%= @response.details %>
+</p>
+
+<p>
+  <strong>Media data:</strong>
+  <%= @response.media_data %>
+</p>
+
+<p>
+  <strong>Media filename:</strong>
+  <%= @response.media_filename %>
+</p>
+
+<p>
+  <strong>Media type:</strong>
+  <%= @response.media_type %>
+</p>
+
+<%= link_to 'Edit', edit_response_path(@response) %> |
+<%= link_to 'Back', responses_path %>

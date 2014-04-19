@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  inspection_id: 1
+  section_id: 1
+  check: false
+  details: MyText
+  media_data: 
+  media_filename: MyText
+  media_type: MyText
+
+two:
+  inspection_id: 1
+  section_id: 1
+  check: false
+  details: MyText
+  media_data: 
+  media_filename: MyText
+  media_type: MyText

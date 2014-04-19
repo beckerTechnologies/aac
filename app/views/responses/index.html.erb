@@ -1,0 +1,39 @@
+<h1>Listing responses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Inspection</th>
+      <th>Section</th>
+      <th>Check</th>
+      <th>Details</th>
+      <th>Media data</th>
+      <th>Media filename</th>
+      <th>Media type</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @responses.each do |response| %>
+      <tr>
+        <td><%= response.inspection_id %></td>
+        <td><%= response.section_id %></td>
+        <td><%= response.check %></td>
+        <td><%= response.details %></td>
+        <td><%= response.media_data %></td>
+        <td><%= response.media_filename %></td>
+        <td><%= response.media_type %></td>
+        <td><%= link_to 'Show', response %></td>
+        <td><%= link_to 'Edit', edit_response_path(response) %></td>
+        <td><%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Response', new_response_path %>
