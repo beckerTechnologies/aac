@@ -16,8 +16,7 @@
     <%= f.select( :dealer_id,  Dealer.all.map {|u| [u.name,u.id]}, {:include_blank => "Select a Dealer"}) %>
   </div>
   <div class="field">
-    <%= f.label :user_is %><br>
-    <%= f.number_field :user_is %>
+    <%= f.hidden_field :user_id current_user.id %>
   </div>
   <div class="field">
     <%= f.label :vehicle_id %><br>

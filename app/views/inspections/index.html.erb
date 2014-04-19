@@ -4,7 +4,7 @@
   <thead>
     <tr>
       <th>Dealer</th>
-      <th>User is</th>
+      <th>User</th>
       <th>Vehicle</th>
       <th></th>
       <th></th>
@@ -16,7 +16,7 @@
     <% @inspections.each do |inspection| %>
       <tr>
         <td><%= inspection.dealer_id %></td>
-        <td><%= inspection.user_is %></td>
+        <td><%= inspection.user_id %></td>
         <td><%= inspection.vehicle_id %></td>
         <td><%= link_to 'Show', inspection %></td>
         <td><%= link_to 'Edit', edit_inspection_path(inspection) %></td>
