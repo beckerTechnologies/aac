@@ -1,8 +1,8 @@
 Aac::Application.routes.draw do
 
-  resources :responses
-
   resources :inspections
+
+  resources :responses
 
   resources :vehicles
 

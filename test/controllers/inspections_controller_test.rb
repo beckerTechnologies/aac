@@ -18,7 +18,7 @@ class InspectionsControllerTest < ActionController::TestCase
 
   test "should create inspection" do
     assert_difference('Inspection.count') do
-      post :create, inspection: { deadler_id: @inspection.deadler_id, user_is: @inspection.user_is, vehicle_id: @inspection.vehicle_id }
+      post :create, inspection: { dealer_id: @inspection.dealer_id, user_is: @inspection.user_is, vehicle_id: @inspection.vehicle_id }
     end
 
     assert_redirected_to inspection_path(assigns(:inspection))
@@ -35,7 +35,7 @@ class InspectionsControllerTest < ActionController::TestCase
   end
 
   test "should update inspection" do
-    patch :update, id: @inspection, inspection: { deadler_id: @inspection.deadler_id, user_is: @inspection.user_is, vehicle_id: @inspection.vehicle_id }
+    patch :update, id: @inspection, inspection: { dealer_id: @inspection.dealer_id, user_is: @inspection.user_is, vehicle_id: @inspection.vehicle_id }
     assert_redirected_to inspection_path(assigns(:inspection))
   end
 

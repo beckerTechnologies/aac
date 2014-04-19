@@ -3,7 +3,7 @@
 <table>
   <thead>
     <tr>
-      <th>Deadler</th>
+      <th>Dealer</th>
       <th>User is</th>
       <th>Vehicle</th>
       <th></th>
@@ -15,7 +15,7 @@
   <tbody>
     <% @inspections.each do |inspection| %>
       <tr>
-        <td><%= inspection.deadler_id %></td>
+        <td><%= inspection.dealer_id %></td>
         <td><%= inspection.user_is %></td>
         <td><%= inspection.vehicle_id %></td>
         <td><%= link_to 'Show', inspection %></td>
