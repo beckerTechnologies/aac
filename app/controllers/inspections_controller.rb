@@ -34,7 +34,7 @@ class InspectionsController < ApplicationController
         @vehicle.save
         @inspection.vehicle_id = @vehicle.id
         @inspection.save
-        format.html { redirect_to @inspection, notice: 'Inspection was successfully created.' }
+        format.html { redirect_to controller: 'responses',  action: 'new', notice: 'Inspection was successfully created.' }
         format.json { render action: 'show', status: :created, location: @inspection }
       else
         format.html { render action: 'new' }
