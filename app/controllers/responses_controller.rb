@@ -30,7 +30,7 @@ class ResponsesController < ApplicationController
 
     respond_to do |format|
       if @response.save
-        if (session[:step]== 3) #Section.count) #TODO session maintenance. 
+        if (session[:step]== 5) #Section.count) #TODO session maintenance. 
           session[:step]= nil
           session[:inspection_id] = nil
           format.html { redirect_to controller: 'dashboard', action: 'index', notice: 'inspection completed.' }
