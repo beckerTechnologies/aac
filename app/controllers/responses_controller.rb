@@ -15,6 +15,7 @@ class ResponsesController < ApplicationController
 
   # GET /responses/new
   def new
+    session[:step] = session[:step] + 1
     @response = Response.new
   end
 
@@ -29,8 +30,15 @@ class ResponsesController < ApplicationController
 
     respond_to do |format|
       if @response.save
-        format.html { redirect_to @response, notice: 'Response was successfully created.' }
-        format.json { render action: 'show', status: :created, location: @response }
+        if (session[:step]== 3) #Section.count) #TODO session maintenance. 
+          session[:step]= nil
+          session[:inspection_id] = nil
+          format.html { redirect_to controller: 'dashboard', action: 'index', notice: 'inspection completed.' }
+          format.json { render action: 'show', status: :created, location: @response }
+        else  
+          format.html { redirect_to action: 'new', notice: 'Response was successfully created.' }
+          format.json { render action: 'show', status: :created, location: @response }
+        end
       else
         format.html { render action: 'new' }
         format.json { render json: @response.errors, status: :unprocessable_entity }

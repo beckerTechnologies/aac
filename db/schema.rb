@@ -57,6 +57,7 @@ ActiveRecord::Schema.define(version: 20140419044155) do
     t.text     "number"
     t.text     "question"
     t.text     "directions"
+    t.boolean  "has_checkbox"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

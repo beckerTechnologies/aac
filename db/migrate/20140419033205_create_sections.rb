@@ -4,6 +4,7 @@ class CreateSections < ActiveRecord::Migration
       t.text :number
       t.text :question
       t.text :directions
+      t.boolean :has_checkbox
 
       t.timestamps
     end

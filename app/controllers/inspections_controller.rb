@@ -34,6 +34,8 @@ class InspectionsController < ApplicationController
         @vehicle.save
         @inspection.vehicle_id = @vehicle.id
         @inspection.save
+        session[:inspection_id] = @inspection.id
+        session[:step] = 0
         format.html { redirect_to controller: 'responses',  action: 'new', notice: 'Inspection was successfully created.' }
         format.json { render action: 'show', status: :created, location: @inspection }
       else

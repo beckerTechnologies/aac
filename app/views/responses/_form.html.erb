@@ -12,32 +12,39 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :inspection_id %><br>
-    <%= f.number_field :inspection_id %>
+    <%= Section.find(session[:step]).question%>
   </div>
-  <div class="field">
-    <%= f.label :section_id %><br>
-    <%= f.number_field :section_id %>
-  </div>
+  <%= f.hidden_field :inspection_id, value: session[:inspection_id] %>
+  <%= f.hidden_field :section_id, value: session[:step]%>
+
+  <% if Section.find(session[:step]).has_checkbox %>
   <div class="field">
     <%= f.label :check %><br>
     <%= f.check_box :check %>
   </div>
+  <% end %>
   <div class="field">
     <%= f.label :details %><br>
     <%= f.text_area :details %>
   </div>
+  <% if Section.find(session[:step]).has_checkbox %>
   <div class="field">
     <%= f.label :media_data %><br>
-    <%= f.text_field :media_data %>
+    <%= f.file_field :media %>
+  </div>
+  <% end %>
+
+  <div class="field">
+    <% f.label :media_data %><br>
+    <% f.text_field :media_data %>
   </div>
   <div class="field">
-    <%= f.label :media_filename %><br>
-    <%= f.text_area :media_filename %>
+    <% f.label :media_filename %><br>
+    <% f.text_area :media_filename %>
   </div>
   <div class="field">
-    <%= f.label :media_type %><br>
-    <%= f.text_area :media_type %>
+    <% f.label :media_type %><br>
+    <% f.text_area :media_type %>
   </div>
   <div class="actions">
     <%= f.submit %>
