@@ -6,15 +6,13 @@ Aac::Application.routes.draw do
   
   devise_for :users
   get "home/index"
-  resources :media
-
   resources :roles
 
   resources :dealers
 
   resources :users
 
-  resources :vehicles
+  resources :inspections
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

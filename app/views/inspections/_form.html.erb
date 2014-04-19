@@ -1,10 +1,10 @@
-<%= form_for(@vehicle) do |f| %>
-  <% if @vehicle.errors.any? %>
+<%= form_for(@inspection) do |f| %>
+  <% if @inspection.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
+      <h2><%= pluralize(@inspection.errors.count, "error") %> prohibited this inspection from being saved:</h2>
 
       <ul>
-      <% @vehicle.errors.full_messages.each do |msg| %>
+      <% @inspection.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>

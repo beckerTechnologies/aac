@@ -1,3 +1,3 @@
 class Dealer < ActiveRecord::Base
-	has_many :vehicles
+	has_many :inspections
 end
