@@ -4,23 +4,35 @@
       <h2><%= pluralize(@inspection.errors.count, "error") %> prohibited this inspection from being saved:</h2>
 
       <ul>
-      <% @inspection.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @inspection.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
+  <%= f.fields_for(@vehicle) do |v| %>
+    <% if @vehicle.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@vehicle.errors.count, "error") %> prohibited this vehicle from being saved:</h2>
 
-  <div class="field">
-    <%= f.label :dealer_id %><br>
-    <%= f.select( :dealer_id,  Dealer.all.map {|u| [u.name,u.id]}, {:include_blank => "Select a Dealer"}) %>
-  </div>
-  <div class="field">
-    <%= f.hidden_field :user_id current_user.id %>
-  </div>
-  <div class="field">
-    <%= f.label :vehicle_id %><br>
-    <%= f.number_field :vehicle_id %>
+        <ul>
+          <% @vehicle.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :dealer_id %><br>
+      <%= f.select( :dealer_id,  Dealer.all.map {|u| [u.name,u.id]}, {:include_blank => "Select a Dealer"}) %>
+    </div>
+    <div class="field">
+      <%= f.hidden_field :user_id, :value => current_user.id %>
+    </div>
+    <div class="field">
+      <%= render 'vehicles/form', :f=> v%>
+    <% end %>
   </div>
   <div class="actions">
     <%= f.submit %>

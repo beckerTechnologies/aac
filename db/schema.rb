@@ -29,7 +29,7 @@ ActiveRecord::Schema.define(version: 20140419044155) do
 
   create_table "inspections", force: true do |t|
     t.integer  "dealer_id"
-    t.integer  "user_is"
+    t.integer  "user_id"
     t.integer  "vehicle_id"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -88,11 +88,11 @@ ActiveRecord::Schema.define(version: 20140419044155) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   create_table "vehicles", force: true do |t|
-    t.integer  "vin"
     t.integer  "year"
     t.text     "make"
     t.text     "model"
     t.text     "stock_number"
+    t.integer  "vin"
     t.text     "exterior_color"
     t.text     "interior_color"
     t.datetime "created_at"

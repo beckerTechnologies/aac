@@ -16,6 +16,7 @@ class InspectionsController < ApplicationController
   # GET /inspections/new
   def new
     @inspection = Inspection.new
+    @vehicle = Vehicle.new
   end
 
   # GET /inspections/1/edit
@@ -25,10 +26,14 @@ class InspectionsController < ApplicationController
   # POST /inspections
   # POST /inspections.json
   def create
+    @vehicle = Vehicle.new(inspection_params[:vehicle])
     @inspection = Inspection.new(inspection_params)
 
     respond_to do |format|
-      if @inspection.save
+      if @inspection.valid? && @vehicle.valid?
+        @vehicle.save
+        @inspection.vehicle_id = @vehicle.id
+        @inspection.save
         format.html { redirect_to @inspection, notice: 'Inspection was successfully created.' }
         format.json { render action: 'show', status: :created, location: @inspection }
       else
@@ -66,10 +71,11 @@ class InspectionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_inspection
       @inspection = Inspection.find(params[:id])
+      @vehicle = Vehicle.find(@inspection.vehicle_id)
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inspection_params
-      params.require(:inspection).permit(:dealer_id, :user_id, :vehicle_id)
+      params.require(:inspection).permit(:dealer_id, :user_id, :vehicle_id, vehicle_attributes: [:vin, :year, :make, :model, :stock_number, :exterior_color, :interior_color])
     end
 end
