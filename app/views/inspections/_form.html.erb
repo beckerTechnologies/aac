@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :dealer_id %><br>
-    <%= f.select( :dealer_id,  Dealer.all.map {|u| [u.name,u.id]}, {:include_blank => "Select a Dealer"}) %></div>
+    <%= f.select( :dealer_id,  Dealer.all.map {|u| [u.name,u.id]}, {:include_blank => "Select a Dealer"}) %>
   </div>
   <div class="field">
     <%= f.label :user_is %><br>
