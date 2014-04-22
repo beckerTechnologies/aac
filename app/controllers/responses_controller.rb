@@ -27,7 +27,11 @@ class ResponsesController < ApplicationController
   # POST /responses.json
   def create
     @response = Response.new(response_params)
-
+    if((Section.find(session[:step])).has_checkbox && response_params[:check] && params[:response][:media])
+      @response.media_data = params[:response][:media].read;
+      @response.media_filename = params[:response][:media].original_filename;
+      @response.media_type = params[:response][:media].content_type;
+    end 
     respond_to do |format|
       if @response.save
         if (session[:step]== 5) #Section.count) #TODO session maintenance. 
@@ -39,7 +43,7 @@ class ResponsesController < ApplicationController
           format.html { redirect_to action: 'new', notice: 'Response was successfully created.' }
           format.json { render action: 'show', status: :created, location: @response }
         end
-      else
+      else # TODO model validations on check based media and details
         format.html { render action: 'new' }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       end
