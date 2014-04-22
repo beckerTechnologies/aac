@@ -4,11 +4,12 @@
   <thead>
     <tr>
       <th>Role</th>
+      <th>Email Address</th>
       <th>Name</th>
       <th>Address</th>
       <th>City</th>
       <th>State</th>
-      <th>Zip-code</th>
+      <th>Zip</th>
       <th>Phone number</th>
       <th>Admin</th>
       <th></th>
@@ -21,11 +22,12 @@
     <% @users.each do |user| %>
       <tr>
         <td><%= user.role_id %></td>
+        <td><%= user.email %></td>
         <td><%= user.name %></td>
         <td><%= user.address %></td>
         <td><%= user.city %></td>
         <td><%= user.state %></td>
-        <td><%= user.zip-code %></td>
+        <td><%= user.zip %></td>
         <td><%= user.phone_number %></td>
         <td><%= user.admin %></td>
         <td><%= link_to 'Show', user %></td>
