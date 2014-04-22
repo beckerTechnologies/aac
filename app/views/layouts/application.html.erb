@@ -40,8 +40,8 @@
 
 	<p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
-  <%= session[:step]%>
-  <%= session[:inspection_id]%>
+  <% session[:step] # remove after end-to-end testing. %>
+  <% session[:inspection_id] # remove after end-to-end testing. %>
 
 
 <%= yield %>

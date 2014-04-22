@@ -12,7 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= Section.find(session[:step]).question %><br/>
+    <div class='section'><%= (Section.find(session[:step]).heading).html_safe %></div>
+    <div class='question'><%= Section.find(session[:step]).question %></div>
     <small> <%= Section.find(session[:step]).directions %> </small>
   </div>
   <%= f.hidden_field :inspection_id, value: session[:inspection_id] %>
@@ -20,10 +21,10 @@
 
   <% if Section.find(session[:step]).has_checkbox %>
   <div class="field">
-    YES
-    <%= f.check_box :check %>
-    NO
-    <%= check_box_tag :nil%>
+
+    YES <%= f.radio_button :check, "1" %> </br>
+    NO <%= f.radio_button :check, "0" %>
+
   </div>
   <% end %>
   <div class="field">
@@ -36,19 +37,6 @@
     <%= f.file_field :media %>
   </div>
   <% end %>
-
-  <div class="field">
-    <% f.label :media_data %><br>
-    <% f.text_field :media_data %>
-  </div>
-  <div class="field">
-    <% f.label :media_filename %><br>
-    <% f.text_area :media_filename %>
-  </div>
-  <div class="field">
-    <% f.label :media_type %><br>
-    <% f.text_area :media_type %>
-  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

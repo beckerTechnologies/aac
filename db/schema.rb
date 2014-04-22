@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140422022632) do
 
   create_table "sections", force: true do |t|
     t.text     "number"
+    t.text     "heading"
     t.text     "question"
     t.text     "directions"
     t.boolean  "has_checkbox"
