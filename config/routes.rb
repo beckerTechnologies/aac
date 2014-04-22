@@ -1,5 +1,11 @@
 Aac::Application.routes.draw do
 
+  resources :reports do
+    collection do
+      get :pdf
+    end
+  end
+
   resources :inspections
 
   resources :responses
