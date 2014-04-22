@@ -20,8 +20,10 @@
 
   <% if Section.find(session[:step]).has_checkbox %>
   <div class="field">
-    <%= f.label :check %><br>
+    YES
     <%= f.check_box :check %>
+    NO
+    <%= check_box_tag :nil%>
   </div>
   <% end %>
   <div class="field">
