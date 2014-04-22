@@ -12,7 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= Section.find(session[:step]).question %>
+    <%= Section.find(session[:step]).question %><br/>
     <small> <%= Section.find(session[:step]).directions %> </small>
   </div>
   <%= f.hidden_field :inspection_id, value: session[:inspection_id] %>

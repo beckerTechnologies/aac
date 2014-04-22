@@ -3,11 +3,17 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-gem 'pg'				## PostgreSQL DB
+gem 'pg'						## PostgreSQL DB
 
-gem 'devise'			## For authenticating users
+gem 'devise'					## For authenticating users
 
-gem 'unicorn'			## Webserver for Heroku
+gem 'unicorn'					## Webserver for Heroku
+
+gem 'wkhtmltopdf-binary'		## Library for Wicked_PDF Gem
+
+gem 'wicked_pdf'				## To generate PDF files that support HTML and CSS 
+
+gem 'wkhtmltopdf'				## Library for Wicked_PDF Gem
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
