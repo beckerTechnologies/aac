@@ -27,7 +27,8 @@ class ResponsesController < ApplicationController
   # POST /responses.json
   def create
     @response = Response.new(response_params)
-    if((Section.find(session[:step])).has_checkbox && response_params[:check] && params[:response][:media])
+    if( #params[:has_checkbox]
+      response_params[:check] && params[:response][:media])
       @response.media_data = params[:response][:media].read;
       @response.media_filename = params[:response][:media].original_filename;
       @response.media_type = params[:response][:media].content_type;

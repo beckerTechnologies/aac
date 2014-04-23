@@ -1,3 +1,4 @@
+<div class='centered'>
 <%= form_for(@response) do |f| %>
   <% if @response.errors.any? %>
     <div id="error_explanation">
@@ -19,25 +20,20 @@
   <%= f.hidden_field :inspection_id, value: session[:inspection_id] %>
   <%= f.hidden_field :section_id, value: session[:step]%>
 
-  <% if Section.find(session[:step]).has_checkbox %>
   <div class="field">
 
-    YES <%= f.radio_button :check, "1" %> </br>
+    YES <%= f.radio_button :check, "1" %> 
     NO <%= f.radio_button :check, "0" %>
 
   </div>
-  <% end %>
   <div class="field">
-    <%= f.label :details %><br>
     <%= f.text_area :details %>
   </div>
-  <% if Section.find(session[:step]).has_checkbox %>
   <div class="field">
-    <%= f.label :media_data %><br>
     <%= f.file_field :media %>
   </div>
-  <% end %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Next" %>
   </div>
 <% end %>
+</div>
