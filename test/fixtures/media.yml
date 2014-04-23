@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  response_id: 1
+  label: MyText
+  description: MyText
+  data: 
+  filename: MyText
+  type: MyText
+
+two:
+  response_id: 1
+  label: MyText
+  description: MyText
+  data: 
+  filename: MyText
+  type: MyText
