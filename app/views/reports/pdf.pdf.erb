@@ -1,5 +1,74 @@
 
+<h2>Dealer Information </h2>
 
-<% @sections.each do |s| %>
-	<%= s.number %> - <%= s.question %> <br/>
+
+<h4>Seller's Name (Dealer or Other):</h4>
+
+<%= @dealer.name %>
+
+<h4>Dealer License Number:</h4>
+
+<%= @dealer.license_number %>
+
+<h4>Seller Street Address:</h4>
+
+<%= @dealer.address %>
+
+<h4>City:</h4>
+
+<%= @dealer.city %>
+
+<h4>State:</h4>
+
+<%= @dealer.state %>
+
+<h4>Zip:</h4>
+
+<%=  @dealer.zip %>
+
+<br/><br/><br/><br/>
+
+<h2>Vehicle Information</h2>
+
+<h4>Year:</h4>
+
+<%= @vehicle.year %>
+
+<h4>Make:</h4>
+
+<%= @vehicle.make %>
+
+<h4>Model:</h4>
+
+<%= @vehicle.model %>
+
+<h4>Stock #:</h4>
+
+<%= @vehicle.stock_number %>
+
+<h4>Vin #:</h4>
+
+<%= @vehicle.vin %>
+
+<h4>Exterior Color:</h4>
+
+<%= @vehicle.exterior_color %>
+
+<h4>Interior Color:</h4>
+
+<%= @vehicle.interior_color %>
+
+<br/><br/><br/><br/>
+
+<% Section.all.each do |section| %>
+	<h2><%= section.heading.html_safe %></h2>
+	<h4><%= section.question %></h4>
+	<h6><%= section.directions %></h6>
+
+	<% Response.where(:section_id => section.id).each do |response| %>
+		<%= response.details %><br/><br/>
+	<% end %>
+
 <% end %>
+
+

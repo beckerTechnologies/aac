@@ -9,6 +9,7 @@
       <th></th>
       <th></th>
       <th></th>
+      <th></th>
     </tr>
   </thead>
 
@@ -21,6 +22,7 @@
         <td><%= link_to 'Show', inspection %></td>
         <td><%= link_to 'Edit', edit_inspection_path(inspection) %></td>
         <td><%= link_to 'Destroy', inspection, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show PDF', {:controller => "reports", :action => "pdf", :id => inspection.id, :format => :pdf} %></td>
       </tr>
     <% end %>
   </tbody>

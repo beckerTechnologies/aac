@@ -63,11 +63,17 @@ class ReportsController < ApplicationController
 
   def pdf
     @sections = Section.all
+    @inspection = Inspection.find(params[:id])
+    @dealer = Dealer.find_by id: @inspection.dealer_id
+    @vehicle = Vehicle.find_by id: @inspection.vehicle_id
+    @response = Response.find_by inspection_id: @inspection.id
+    @section = Section.find_by id: @response.section_id
     respond_to do |format|
         format.html
         format.pdf do
           render  :pdf => "file.pdf",
-                  :layout => 'nill.html', 
+                  :layout => 'nill.html',
+                  :encoding => 'UTF-8',
                   :page_size => 'letter',
                   :footer => { :right => '[page]', :spacing => 0 }
           end
