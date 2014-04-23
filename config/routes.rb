@@ -1,5 +1,7 @@
 Aac::Application.routes.draw do
 
+  resources :media
+
   resources :reports do
     collection do
       get :pdf
