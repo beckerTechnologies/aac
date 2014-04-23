@@ -26,9 +26,9 @@ class InspectionsController < ApplicationController
   # POST /inspections
   # POST /inspections.json
   def create
-    @vehicle = Vehicle.new(inspection_params[:vehicle])
+    params[:inspection][:vehicle].permit!
     @inspection = Inspection.new(inspection_params)
-
+    @vehicle = Vehicle.new(params[:inspection][:vehicle])
     respond_to do |format|
       if @inspection.valid? && @vehicle.valid?
         @vehicle.save
