@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140422022632) do
+ActiveRecord::Schema.define(version: 20140423033944) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,17 @@ ActiveRecord::Schema.define(version: 20140422022632) do
     t.datetime "updated_at"
   end
 
+  create_table "media", force: true do |t|
+    t.integer  "response_id"
+    t.text     "label"
+    t.text     "description"
+    t.binary   "data"
+    t.text     "filename"
+    t.text     "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "reports", force: true do |t|
     t.text     "name"
     t.datetime "created_at"
@@ -46,9 +57,7 @@ ActiveRecord::Schema.define(version: 20140422022632) do
     t.integer  "section_id"
     t.boolean  "check"
     t.text     "details"
-    t.binary   "media_data"
-    t.text     "media_filename"
-    t.text     "media_type"
+    t.text     "auxilary_details"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -60,11 +69,11 @@ ActiveRecord::Schema.define(version: 20140422022632) do
   end
 
   create_table "sections", force: true do |t|
+    t.text     "form"
     t.text     "number"
     t.text     "heading"
     t.text     "question"
     t.text     "directions"
-    t.boolean  "has_checkbox"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

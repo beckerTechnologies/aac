@@ -5,9 +5,7 @@ class CreateResponses < ActiveRecord::Migration
       t.integer :section_id
       t.boolean :check
       t.text :details
-      t.binary :media_data
-      t.text :media_filename
-      t.text :media_type
+      t.text :auxilary_details
 
       t.timestamps
     end
