@@ -5,7 +5,7 @@ class CreateVehicles < ActiveRecord::Migration
       t.text :make
       t.text :model
       t.text :stock_number
-      t.integer :vin
+      t.text :vin
       t.text :exterior_color
       t.text :interior_color
 

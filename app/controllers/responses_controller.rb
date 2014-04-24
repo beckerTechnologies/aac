@@ -34,6 +34,12 @@ class ResponsesController < ApplicationController
       @response.media_filename = params[:response][:media].original_filename;
       @response.media_type = params[:response][:media].content_type;
     end 
+    @check_val = params[:response][:check]
+    session[:debug] = "check-#{@check_val}-"
+    @response.set_check = true if [1,3..30].include? session[:step]
+    @response.set_details = true if @check_val=='1' # also validate for step 1, with regex this time. TODO  
+    @response.set_auxdetails = true if @check_val=='0' 
+    
     respond_to do |format|
       if @response.save
         if (session[:step]== Section.count) #TODO session maintenance. 

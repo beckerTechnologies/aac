@@ -30,7 +30,7 @@ class InspectionsController < ApplicationController
     @inspection = Inspection.new(inspection_params)
     @vehicle = Vehicle.new(params[:inspection][:vehicle])
     respond_to do |format|
-      if @inspection.valid? && @vehicle.valid?
+      if @vehicle.valid?
         @vehicle.save
         @inspection.vehicle_id = @vehicle.id
         @inspection.save
