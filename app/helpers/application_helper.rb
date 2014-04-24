@@ -59,24 +59,28 @@ def us_states
 
 def vehicle_make
   [
-    'Audi',
-    'Toyota',
-    'Mitsubishi',
-    'BMW',
-    'KIA',
-    'VW',
-    'Ferrari',
-    'Porche',
-    'Hyundai',
-    'SEAT',
-    'Volvo',
-    'Chevrolet',
-    'Dodge',
-    'GMC',
-    'Ford',
-    'Jeep',
-    'Tesla',
-    'Buick'
+    "
+    ~,
+    Audi,
+    Toyota,
+    Mitsubishi,
+    BMW,
+    KIA,
+    VW,
+    Ferrari,
+    Porche,
+    Hyundai,
+    SEAT,
+    Volvo,
+    Chevrolet,
+    Dodge,
+    GMC,
+    Ford,
+    Jeep,
+    Tesla,
+    Buick,
+    ~
+    "
   ]
 end
 end
