@@ -17,6 +17,7 @@ class ResponsesController < ApplicationController
   def new
     session[:step] = session[:step] + 1
     @response = Response.new
+    @medium = Medium.new
   end
 
   # GET /responses/1/edit
@@ -83,6 +84,6 @@ class ResponsesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def response_params
-      params.require(:response).permit(:inspection_id, :section_id, :check, :details, :media_data, :media_filename, :media_type)
+      params.require(:response).permit(:inspection_id, :section_id, :check, :details, :auxilary_details)
     end
 end

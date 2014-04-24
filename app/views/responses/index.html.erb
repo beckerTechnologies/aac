@@ -7,9 +7,7 @@
       <th>Section</th>
       <th>Check</th>
       <th>Details</th>
-      <th>Media data</th>
-      <th>Media filename</th>
-      <th>Media type</th>
+      <th>Auxiliary Details</th>
       <th></th>
       <th></th>
       <th></th>
@@ -23,9 +21,7 @@
         <td><%= response.section_id %></td>
         <td><%= response.check %></td>
         <td><%= response.details %></td>
-        <td><%= response.media_data %></td>
-        <td><%= response.media_filename %></td>
-        <td><%= response.media_type %></td>
+        <td><%= response.auxilary_details %></td>
         <td><%= link_to 'Show', response %></td>
         <td><%= link_to 'Edit', edit_response_path(response) %></td>
         <td><%= link_to 'Destroy', response, method: :delete, data: { confirm: 'Are you sure?' } %></td>

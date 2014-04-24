@@ -1,0 +1,34 @@
+<div class='centered'>
+  <%= form_for(@response) do |f| %>
+    <% if @response.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@response.errors.count, "error") %> prohibited this response from being saved:</h2>
+
+        <ul>
+          <% @response.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <div class='section'><%= (Section.find(session[:step]).heading).html_safe %></div>
+      <div class='question'><%= Section.find(session[:step]).question %></div>
+      <small> <%= Section.find(session[:step]).directions %> </small>
+    </div>
+    <%= f.hidden_field :inspection_id, value: session[:inspection_id] %>
+    <%= f.hidden_field :section_id, value: session[:step]%>
+
+    <div class="field">
+      YES <%= f.radio_button :check, "1" %> 
+      NO <%= f.radio_button :check, "0" %>
+    </div>
+    <div class="field">
+      <%= f.text_area :details %>
+    </div>
+    <div class="actions">
+      <%= f.submit "Next" %>
+    </div>
+  <% end %>
+</div>
