@@ -29,7 +29,7 @@
   </div>
   <div class="field">
     <%= f.label :state %><br>
-    <%= f.text_area :state %>
+    <%= f.select :state, us_states.map{|u| [u.first,u.last]} %>
   </div>
   <div class="field">
     <%= f.label :zip %><br>

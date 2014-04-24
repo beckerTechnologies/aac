@@ -16,7 +16,7 @@
   <%= f.text_field :city %></div>
 
   <div><%= f.label :state %><br />
-  <%= f.text_field :state %></div>
+  <%= f.select :state, us_states.map{|u| [u.first,u.last]} %></div>
 
   <div><%= f.label :zip %><br />
   <%= f.text_field :zip %></div>
