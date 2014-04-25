@@ -23,9 +23,8 @@
       <%= f.text_field :details %>
     </div>
     <div class="field">
-      <%= f.label :check, "Including Actual Miles?"%></br>
-      YES <%= f.radio_button :check, "1" %> 
-      NO <%= f.radio_button :check, "0" %>
+      <%= f.label "Including Actual Miles?"%></br>
+      <%= f.check_box :check %>
     </div>
     <div class="field">
       <%= f.text_area :auxilary_details %>

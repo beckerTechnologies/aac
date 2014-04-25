@@ -39,9 +39,9 @@ ActiveRecord::Schema.define(version: 20140423033944) do
     t.integer  "response_id"
     t.text     "label"
     t.text     "description"
-    t.binary   "data"
+    t.binary   "filedata"
     t.text     "filename"
-    t.text     "type"
+    t.text     "filetype"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -55,7 +55,7 @@ ActiveRecord::Schema.define(version: 20140423033944) do
   create_table "responses", force: true do |t|
     t.integer  "inspection_id"
     t.integer  "section_id"
-    t.boolean  "check"
+    t.integer  "check"
     t.text     "details"
     t.text     "auxilary_details"
     t.datetime "created_at"

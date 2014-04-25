@@ -9,10 +9,14 @@
 
 # for testing only... have fun reseting db as many times as needed 
 
-User.create({:email => "sunila@gmail.com", :password => "123456789", :password_confirmation => "123456789" })
-User.create({:email => "wisam@gmail.com", :password => "123456789", :password_confirmation => "123456789" })
-User.create({:email => "test@gmail.com", :password => "123456789", :password_confirmation => "123456789" })
-Dealer.create({:name => 'Dealer 1'})
+User.create({:email => "sunila@gmail.com", :password => "123456789", :password_confirmation => "123456789", 
+      :name => "sunila", :address => "abq", :city => "albuqueque", :state => "NM", :zip => "123", :phone_number => "1234567889" })
+User.create({:email => "wisam@gmail.com", :password => "123456789", :password_confirmation => "123456789",
+      :name => "wisam", :address => "abq", :city => "albuqueque", :state => "NM", :zip => "123", :phone_number => "1234567889" })
+User.create({:email => "test@gmail.com", :password => "123456789", :password_confirmation => "123456789",
+      :name => "test", :address => "abq", :city => "albuqueque", :state => "NM", :zip => "123", :phone_number => "1234567889" })
+Dealer.create({:name => 'Dealer 1',
+      :name => "dealer", :license_number => "123876234", :address => "abq", :city => "albuqueque", :state => "NM", :zip => "123" })
 
 
 # sections, all with heading, question and directions. 

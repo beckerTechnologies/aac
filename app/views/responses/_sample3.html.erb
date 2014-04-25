@@ -21,13 +21,15 @@
     <%= f.hidden_field :section_id, value: session[:step]%>
 
     <div class="field">
-      YES <%= f.radio_button :check, "1" %> 
-      NO <%= f.radio_button :check, "0" %>
+      <%= f.label :check, "Yes", :value => "1"  %>
+      <%= f.radio_button :check, true %>
+      <%= f.label :check, "No", :value => "0" %>
+      <%= f.radio_button :check, false, :checked => true %>
     </div>
     <div class="field">
       <%= f.text_area :details %>
     </div>
-    <%= f.fields_for(@medium) do |m| %>
+    <%= f.fields_for(@medium, :html=>{:multipart=>true}) do |m| %>
       <% if @medium.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@medium.errors.count, "error") %> prohibited this medium from being saved:</h2>

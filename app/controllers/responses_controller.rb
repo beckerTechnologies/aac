@@ -15,7 +15,8 @@ class ResponsesController < ApplicationController
 
   # GET /responses/new
   def new
-    session[:step] = session[:step] + 1
+    @inspection = Inspection.find session[:inspection_id]
+    session[:step] = @inspection.responses.count + 1
     @response = Response.new
     @medium = Medium.new
   end
@@ -28,30 +29,33 @@ class ResponsesController < ApplicationController
   # POST /responses.json
   def create
     @response = Response.new(response_params)
-    if( #params[:has_checkbox]
-      response_params[:check] && params[:response][:media])
-      @response.media_data = params[:response][:media].read;
-      @response.media_filename = params[:response][:media].original_filename;
-      @response.media_type = params[:response][:media].content_type;
+    @medium = Medium.new
+    if(params[:response][:medium])
+      @medium.filedata = params[:response][:medium][:media].read;
+      @medium.filename = params[:response][:medium][:media].original_filename;
+      @medium.filetype = params[:response][:medium][:media].content_type;
     end 
     @check_val = params[:response][:check]
-    session[:debug] = "check-#{@check_val}-"
-    @response.set_check = true if [1,3..30].include? session[:step]
-    @response.set_details = true if @check_val=='1' # also validate for step 1, with regex this time. TODO  
-    @response.set_auxdetails = true if @check_val=='0' 
+    #@response.set_check = true if (3..30).include? session[:step] there is a defualt selection. so no way it'll be blank. 
+    @response.set_details = true if ( @check_val=='1' || session[:step]==1) # also validate for step 1, with regex this time. TODO  
+    @response.set_auxdetails = true if ( @check_val=='0' && session[:step]==1) 
     
     respond_to do |format|
       if @response.save
-        if (session[:step]== Section.count) #TODO session maintenance. 
+        if params[:response][:medium]
+          @medium.response_id = @response.id
+          @medium.save
+        end
+        if (session[:step]== Section.count)
           session[:step]= nil
           session[:inspection_id] = nil
           format.html { redirect_to controller: 'dashboard', action: 'index', notice: 'inspection completed.' }
           format.json { render action: 'show', status: :created, location: @response }
         else  
           format.html { redirect_to action: 'new', notice: 'Response was successfully created.' }
-          format.json { render action: 'show', status: :created, location: @response }
+          format.json { render action: 'new', status: :created, location: @response }
         end
-      else # TODO model validations on check based media and details
+      else 
         format.html { render action: 'new' }
         format.json { render json: @response.errors, status: :unprocessable_entity }
       end

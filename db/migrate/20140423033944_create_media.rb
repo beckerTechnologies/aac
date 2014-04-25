@@ -4,9 +4,9 @@ class CreateMedia < ActiveRecord::Migration
       t.integer :response_id
       t.text :label
       t.text :description
-      t.binary :data
+      t.binary :filedata
       t.text :filename
-      t.text :type
+      t.text :filetype
 
       t.timestamps
     end
