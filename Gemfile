@@ -15,6 +15,8 @@ gem 'wicked_pdf'				## To generate PDF files that support HTML and CSS
 
 gem 'wkhtmltopdf'				## Library for Wicked_PDF Gem
 
+gem 'nokogiri' ## for error message induced div. 
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  require 'nokogiri'
+
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
@@ -20,5 +22,18 @@ class ApplicationController < ActionController::Base
 	def after_sign_in_path_for(resource)
        	dashboard_index_path
     end
+  # place me inside your base controller class
+  ActionView::Base.field_error_proc = Proc.new do |html_tag, object|
+    html = Nokogiri::HTML::DocumentFragment.parse(html_tag)
+    html = html.at_css("input") || html.at_css("textarea")
+    unless html.nil?
+      css_class = html['class'] || ""
+      html['class'] = css_class.split.push("error").join(' ')
+      html['data-error'] = object.error_message.join(". ")
+      html_tag = html.to_s.html_safe
+    end
+    html_tag
+  end
+
 
 end
