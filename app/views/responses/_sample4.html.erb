@@ -21,8 +21,10 @@
     <%= f.hidden_field :section_id, value: session[:step]%>
 
     <div class="field">
-      YES <%= f.radio_button :check, "1" %> 
-      NO <%= f.radio_button :check, "0" %>
+      <%= f.label :check, "Yes", :value => "1"  %>
+      <%= f.radio_button :check, "1" %>
+      <%= f.label :check, "No", :value => "0" %>
+      <%= f.radio_button :check, "0", :checked => true %>
     </div>
     <div class="field">
       <%= f.text_area :details %>

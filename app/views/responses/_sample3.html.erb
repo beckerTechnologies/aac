@@ -22,9 +22,9 @@
 
     <div class="field">
       <%= f.label :check, "Yes", :value => "1"  %>
-      <%= f.radio_button :check, true %>
+      <%= f.radio_button :check, "1" %>
       <%= f.label :check, "No", :value => "0" %>
-      <%= f.radio_button :check, false, :checked => true %>
+      <%= f.radio_button :check, "0" %>
     </div>
     <div class="field">
       <%= f.text_area :details %>
