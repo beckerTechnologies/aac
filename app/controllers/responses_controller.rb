@@ -94,6 +94,6 @@ class ResponsesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def response_params
-      params.require(:response).permit(:inspection_id, :section_id, :check, :details, :auxilary_details, media_attributes: [:response_id, :label, :description, :data, :filename, :type])
+      params.require(:response).permit(:inspection_id, :section_id, :check, :details, :auxilary_details, media_attributes: [:response_id, :label, :description, :filedata, :filename, :filetype])
     end
 end
