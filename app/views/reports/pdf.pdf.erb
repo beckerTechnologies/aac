@@ -60,15 +60,12 @@
 
 <br/><br/><br/><br/>
 
-<% Section.all.each do |section| %>
-	<h2><%= section.heading.html_safe %></h2>
-	<h4><%= section.question %></h4>
-	<h6><%= section.directions %></h6>
-
-	<% Response.where(:section_id => section.id).each do |response| %>
+	<% Response.all.where(:inspection_id => params[:id]).each do |response| %>
+		<h2><%= response.section.heading.html_safe %></h2>
+		<h4><%= response.section.question %></h4>
+		<h6><%= response.section.directions %></h6>
 		<%= response.details %><br/><br/>
-	<% end %>
 
-<% end %>
+	<% end %>
 
 
