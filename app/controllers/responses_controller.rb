@@ -29,12 +29,6 @@ class ResponsesController < ApplicationController
   # POST /responses.json
   def create
     @response = Response.new(response_params)
-    @medium = Medium.new
-    if(params[:response][:medium])
-      @medium.filedata = params[:response][:medium][:media].read;
-      @medium.filename = params[:response][:medium][:media].original_filename;
-      @medium.filetype = params[:response][:medium][:media].content_type;
-    end 
     @check_val = params[:response][:check]
     @response.set_check = true if (3..30).include? session[:step] 
     @response.set_details = true if ( @check_val=='1' || session[:step]==1) # also validate for step 1, with regex this time. TODO  
@@ -42,9 +36,16 @@ class ResponsesController < ApplicationController
     
     respond_to do |format|
       if @response.save
-        if params[:response][:medium]
+        @i = 0
+        while params["medium_o"+@i.to_s]
+          @medium = Medium.new
           @medium.response_id = @response.id
+          @medium.filedata = params["medium_o"+@i.to_s].read;
+          @medium.filename = params["medium_o"+@i.to_s].original_filename;
+          @medium.filetype = params["medium_o"+@i.to_s].content_type;
           @medium.save
+          @i = @i + 1
+          session[:debug] = session[:debug] + @medium.filename + "."
         end
         if (session[:step]== Section.count)
           session[:step]= nil

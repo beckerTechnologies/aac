@@ -1,5 +1,5 @@
 <div class='centered'>
-  <%= form_for(@response) do |f| %>
+  <%= form_for(@response, :html=>{:multipart=>true}) do |f| %>
     <% if @response.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@response.errors.count, "error") %> prohibited this response from being saved:</h2>
@@ -29,22 +29,12 @@
     <div class="field">
       <%= f.text_area :details %>
     </div>
-    <%= f.fields_for(@medium, :html=>{:multipart=>true}) do |m| %>
-      <% if @medium.errors.any? %>
-        <div id="error_explanation">
-          <h2><%= pluralize(@medium.errors.count, "error") %> prohibited this medium from being saved:</h2>
 
-          <ul>
-            <% @medium.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
+    <div id='pictures'>
+    </div>
+    <input type="button" id="add" value="Add more media files"/>
+    <input hidden='true' type="button" id='count' value='1'/>
 
-      <%= render 'media/form_embed', :f => m %>
-
-    <% end%>
     <div class="actions">
       <%= f.submit "Next" %>
     </div>
