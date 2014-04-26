@@ -36,7 +36,7 @@ class ResponsesController < ApplicationController
       @medium.filetype = params[:response][:medium][:media].content_type;
     end 
     @check_val = params[:response][:check]
-    @response.set_check = true if (3..30).include? session[:step] 
+    @response.set_check = true if (3..29).include? session[:step] 
     @response.set_details = true if ( @check_val=='1' || session[:step]==1) # also validate for step 1, with regex this time. TODO  
     @response.set_auxdetails = true if ( @check_val=='0' && session[:step]==1) 
     
