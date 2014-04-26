@@ -11,6 +11,11 @@ class InspectionsController < ApplicationController
   # GET /inspections/1
   # GET /inspections/1.json
   def show
+    @dealer_id = @inspection.dealer_id
+    @dealer = Dealer.find_by id: @dealer_id
+    @vehicle = Vehicle.find_by id: @inspection.vehicle_id
+    @response = Response.find_by inspection_id: @inspection.id
+    @media = Medium.all
   end
 
   # GET /inspections/new

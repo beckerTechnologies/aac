@@ -1,19 +1,45 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Dealer:</strong>
-  <%= @inspection.dealer_id %>
+  <strong>Dealer:</strong><br/>
+  Dealer Name:
+  <%= @dealer.name %><br/>
+  Dealer License Number:
+  <%= @dealer.license_number %><br/>
+  Dealer Address:
+  <%= @dealer.address %><br/>
+  <%= @dealer.city %><br/>
+  <%= @dealer.state %><br/>
+  <%= @dealer.zip %><br/>
 </p>
 
 <p>
-  <strong>User is:</strong>
-  <%= @inspection.user_id %>
+  <strong>Vehicle:</strong><br/>
+  Vehicle Year:
+  <%= @vehicle.year %><br/>
+  Vehicle Make:
+  <%= @vehicle.make %><br/>
+  Vehicle Model:
+  <%= @vehicle.model %><br/>
+  Vehicle Stock Number:
+  <%= @vehicle.stock_number %><br/>
+  Vehicle VIN Number:
+  <%= @vehicle.vin %><br/>
+  Vehicle Exterion Color:
+  <%= @vehicle.exterior_color %><br/>
+  Vehicle Interior Color:
+  <%= @vehicle.interior_color %><br/>
 </p>
 
 <p>
-  <strong>Vehicle:</strong>
-  <%= @inspection.vehicle_id %>
+<% Response.all.where(:inspection_id => @inspection.id).each do |r| %>
+	<strong><%= r.section.heading.html_safe %></strong><br/>
+	<%= r.section.question %><br/>
+	<%= r.section.directions %><br/>
+	<%= r.details %><br/><br/>
+<% end %>
 </p>
+
 
 <%= link_to 'Edit', edit_inspection_path(@inspection) %> |
 <%= link_to 'Back', inspections_path %>
