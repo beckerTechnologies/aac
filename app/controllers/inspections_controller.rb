@@ -5,7 +5,12 @@ class InspectionsController < ApplicationController
   # GET /inspections
   # GET /inspections.json
   def index
-    @inspections = Inspection.all
+    if params[:search]
+      @vehicle = Vehicle.where(:vin => params[:search])
+      @inspections = Inspection.where(:vehicle_id => @vehicle)
+    else
+      @inspections = Inspection.all.order(:id=> :asc)
+    end
   end
 
   def main
