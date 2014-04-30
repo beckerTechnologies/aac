@@ -68,6 +68,7 @@ class ReportsController < ApplicationController
     @vehicle = Vehicle.find_by id: @inspection.vehicle_id
     @response = Response.find_by inspection_id: @inspection.id
     @section = Section.find_by id: @response.section_id
+    @res = Response.all.where(:inspection_id => params[:id]).sort_by{|e| e[:section_id]}
     respond_to do |format|
         format.html
         format.pdf do

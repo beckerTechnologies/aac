@@ -1,71 +1,339 @@
+<div class="margins_right_left">
+<div class="center_text">
+<br>
+<h3> PREVIOUS WRECK DAMAGE OR ALTERATION INSPECTION REPORT </h3>
 
-<h2>Dealer Information </h2>
-
-
-<h4>Seller's Name (Dealer or Other):</h4>
-
-<%= @dealer.name %>
-
-<h4>Dealer License Number:</h4>
-
-<%= @dealer.license_number %>
-
-<h4>Seller Street Address:</h4>
-
-<%= @dealer.address %>
-
-<h4>City:</h4>
-
-<%= @dealer.city %>
-
-<h4>State:</h4>
-
-<%= @dealer.state %>
-
-<h4>Zip:</h4>
-
-<%=  @dealer.zip %>
-
-<br/><br/><br/><br/>
-
-<h2>Vehicle Information</h2>
-
-<h4>Year:</h4>
-
-<%= @vehicle.year %>
-
-<h4>Make:</h4>
-
-<%= @vehicle.make %>
-
-<h4>Model:</h4>
-
-<%= @vehicle.model %>
-
-<h4>Stock #:</h4>
-
-<%= @vehicle.stock_number %>
-
-<h4>Vin #:</h4>
-
-<%= @vehicle.vin %>
-
-<h4>Exterior Color:</h4>
-
-<%= @vehicle.exterior_color %>
-
-<h4>Interior Color:</h4>
-
-<%= @vehicle.interior_color %>
-
-<br/><br/><br/><br/>
-
-	<% Response.all.where(:inspection_id => params[:id]).each do |response| %>
-		<h2><%= response.section.heading.html_safe %></h2>
-		<h4><%= response.section.question %></h4>
-		<h6><%= response.section.directions %></h6>
-		<%= response.details %><br/><br/>
-
-	<% end %>
+<p class="smaller_text"> The following inspection report form has been prepared using the legislative guidelines found in N.M.A.C. 12.2.14.11 regarding what should be contained within an inspection report form. </p>
+</div>
 
 
+<br>
+<h4>1. Dealer Information (N.M.A.C. 12.2.14.11(A-C)): </h4>
+<p>
+<pre class="pre_tag_style">
+Seller's Name (Dealer or Other)  <span class="bold_text"><%= @dealer.name %></span>
+
+Dealer License Number  <span class="bold_text"><%= @dealer.license_number %></span>
+
+Address  <span class="bold_text"><%= @dealer.address %></span>                City  <span class="bold_text"><%= @dealer.city %></span>         State  <span class="bold_text"><%= @dealer.state %></span>            Zip  <span class="bold_text"><%=  @dealer.zip %></span>  
+</pre>
+</p>
+
+
+<br>
+<h4>2. Vehicle Information: (N.M.A.C. 12.2.14.11(D-F)):</h4>
+<p>
+<pre class="pre_tag_style">
+Year: <span class="bold_text"><%= @vehicle.year %></span> Make: <span class="bold_text"><%= @vehicle.make %></span>  Model: <span class="bold_text"><%= @vehicle.model %></span>  Stock #:<span class="bold_text"><%= @vehicle.stock_number.to_s.rjust(12, '0') %></span>  Vin #:<span class="bold_text"><%= @vehicle.vin %></span>
+
+Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>                             Interior Color:  <span class="bold_text"><%= @vehicle.interior_color %></span>
+</pre>
+</p>
+
+
+<br>
+<h4>3. Odometer Reading (N.M.A.C. 12.2.14.11(G)):</h4>
+<p>
+<pre class="pre_tag_style"><%= @res[0].section.question %> <span class="bold_text"><%= @res[0].details %></span>              Not Including Actual Miles <span class="bold_text"><%= @res[0].auxilary_details %></span>
+</pre>
+</p>
+
+
+<br>
+<h4>8. Estimated Total Cost of Repair (N.M.A.C. 12.2.14.11(H)):</h4>
+<p class="smaller_text">DIRECTIONS: Skip until step 8. See below.</p>
+
+
+<br>
+<h4>5. Inspection Revealed Safety Issues:
+<p class="smaller_text">DIRECTIONS: For the following, a “yes” and “no” box should be checked for each item. If “yes” is checked, identify the safety issues with particularity (N.M.A.C. 12.2.14.11(I))</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[27].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[27].details %></span>
+</pre>
+</p>
+
+
+<br>
+<h4>6. Inspection Revealed Frame Damage:</h4>
+<p class="smaller_text">DIRECTIONS: For the following, a “yes” and “no” box should be checked for each item. If “yes” is checked, identify the frame damage with particularity (N.M.A.C. 12.2.14.11(J))</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[28].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[28].details %></span>
+</pre>
+</p>
+
+
+<h3 class="center_text">AGE AND CONDITION OF MOTOR VEHICLE CERTIFICATION</h3>
+
+<br>
+<h4>7. For the following paragraphs and subparagraphs, a “yes” and “no” box should be checked for each item. If “yes” is checked, identify the alteration or repair with particularity and where on the vehicle the alteration or repair is located.</h4>
+
+<h5>(1) inspection of the motor vehicle for evidence of repainting (N.M.A.C. 12.2.14.11(L)(1))</h5>
+
+<p>(a) differences in paint color or texture</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[2].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[2].details %></span>
+</pre>
+</p>
+
+<p>(b) mismatched sizes of metallic sparkle in the paint</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[3].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[3].details %></span>
+</pre>
+</p>
+
+<p>(c) embedded dirt or deep scratches in the top coat of the paint</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[4].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[4].details %></span>
+</pre>
+</p>
+
+<p>(d) uneven paint thickness</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[5].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[5].details %></span>
+</pre>
+</p>
+
+<p>
+
+
+<h5>(2) inspection of the motor vehicle body and cab (N.M.A.C. 12.2.14.11(L)(2))</h5>
+
+<p>(a) uneven gaps between sheet metal panels</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[6].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[6].details %></span>
+</pre>
+</p>
+
+<p>(b) differences between the headlamps</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[7].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[7].details %></span>
+</pre>
+</p>
+
+<p>(c) paint overspray on moldings and trim</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[8].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[8].details %></span>
+</pre>
+</p>
+
+<p>(d) paint tape edges in the jams</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[9].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[9].details %></span>
+</pre>
+</p>
+
+<p>(e) paint chipped off of bolt heads</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[10].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[10].details %></span>
+</pre>
+</p>
+
+<p>(f) paint missing around bolt heads or bolts not centered in the bolt hole</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[11].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[11].details %></span>
+</pre>
+</p>
+
+<p>(g) hammer damage</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[12].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[12].details %></span>
+</pre>
+</p>
+
+<p>(h) holes drilled and plugged in jams or shell of the motor vehicle</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[13].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[13].details %></span>
+</pre>
+</p>
+
+<p>(i) damage inside the trunk or under the spare tire</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[14].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[14].details %></span>
+</pre>
+</p>
+
+<p>(j) signs of corrosion or lack of corrosion protection</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[15].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[15].details %></span>
+</pre>
+</p>
+
+<p>
+
+
+<h5>(3) inspection of the motor vehicle chassis (N.M.A.C. 12.2.14.11(L)(3))</h5>
+
+<p>(a) pinched weld flange underneath the motor vehicle</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[16].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[16].details %></span>
+</pre>
+</p>
+
+<p>(b) weld sites</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[17].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[17].details %></span>
+</pre>
+</p>
+
+<p>(c) signs of repair to unibody structural parts</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[18].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[18].details %></span>
+</pre>
+</p>
+
+<p>(d) signs of buckles or non-OEM welding repair to the unibody structural parts</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[19].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[19].details %></span>
+</pre>
+</p>
+
+<p>(e) signs of corrosion or lack of corrosion protection</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[20].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[20].details %></span>
+</pre>
+</p>
+
+<p>(f) signs of any other alteration or repair having been performed to the chassis</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[21].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[21].details %></span>
+</pre>
+</p>
+
+<p>(g) odometer alteration or repair</p>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[22].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[22].details %></span>
+</pre>
+</p>
+
+<p>
+
+
+<h5>(4) signs of differences and inconsistencies with the motor vehicle’s caulking and seam sealer (N.M.A.C. 12.2.14.11(L)(4))</h5>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[23].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[23].details %></span>
+</pre>
+</p>
+
+
+<h5>(5) signs of tampering with motor vehicle’s identification tags (N.M.A.C. 12.2.14.11(L)(5))</h5>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[24].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[24].details %></span>
+</pre>
+</p>
+
+<h5>(6) signs of motor vehicle parts labeled “R-DOT” (N.M.A.C. 12.2.14.11(L)(6))</h5>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[25].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[25].details %></span>
+</pre>
+</p>
+
+<h5>(7) signs of any type of repairs not consistent with I-CAR collision repair standards or equivalent (N.M.A.C.12.2.14.11(L)(7))</h5>
+
+<p>
+<pre class="pre_tag_style">
+<% if @res[26].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[26].details %></span>
+</pre>
+</p>
+
+
+<pre class="pre_tag_style">
+<h4>8. Estimated Total Cost for Repairs and Alterations:         <%= @res[29].details %></h4></pre>
+
+<p class="smaller_text">DIRECTIONS: Above, estimate the total cost of alterations or repairs for this vehicle to be restored to I-Car standards of equivalent industry standards using industry accepted reverse engineering protocols and original equipment manufacturer “OEM” replacement parts; OR flat rate manual costs as indicated by a nationally recognized manual commonly used in the industry of auto repair. (N.M.A.C. 12.2.14.7). The total should then be entered in the box above AND the box titled ESTIMATED TOTAL COST OF REPAIR in the first section of this report.</p>
+
+
+<br>
+<h4>9. Inspection Information (N.M.A.C. 12.2.14.11(M-N)):</h4>
+
+<p>
+<pre class="pre_tag_style">Date of Inspection            <span class="bold_text"><%= @res[30].details %></span>
+Calculation and total cost for inspection _________________________________
+
+                                                                _________________________________
+
+                                                                _________________________________
+
+                                             Total Cost:   _________________________________</pre>
+</p>
+
+
+<br>
+<h4>10. Inspector Information (N.M.A.C. 12.2.14.11(O-S)):</h4>
+
+<p>
+<pre class="pre_tag_style">
+Name of the business or individual who conducted the inspection <span class="bold_text"><%= current_user.name %></span>
+
+Name and address of the business or individual who conducted the inspection:
+
+Address <span class="bold_text"><%= current_user.address %></span>                City <span class="bold_text"><%= current_user.city %></span>         State <span class="bold_text"><%= current_user.state %></span>            Zip <span class="bold_text"><%= current_user.zip %></span>
+
+Telephone number of the business or individual who conducted the inspection <span class="bold_text"><%= current_user.phone_number %></span> 
+
+
+REPRESENTATIONS:
+
+By signing this inspection report form, I hereby certify that I am a qualified person who is certified by ASE, I-Car level II or equivalent for the purposes of N.M.A.C.12.2.14.7(J) and that I have conducted this inspection with reasonable care for the purposes of N.M.A.C. 12.2.14.7(G).
+
+
+NAME (Printed) __________________________________
+
+SIGNATURE ____________________________________
+
+DATE __________________________________________
+</pre>
+</p>
+
+</div>
