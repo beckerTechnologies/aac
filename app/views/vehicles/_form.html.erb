@@ -5,7 +5,7 @@
 
 <script>
   $(function() {
-    var availableTags = ("<%= vehicle_make %>").split(',');  
+    var availableTags = ("<%= vehicle_make %>").split('&quot;');  
     $( "#tags" ).autocomplete({
       source: availableTags
     });
