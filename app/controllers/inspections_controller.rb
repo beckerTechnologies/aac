@@ -8,6 +8,9 @@ class InspectionsController < ApplicationController
     @inspections = Inspection.all
   end
 
+  def main
+  end
+
   # GET /inspections/1
   # GET /inspections/1.json
   def show

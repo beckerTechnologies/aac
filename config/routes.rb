@@ -8,9 +8,13 @@ Aac::Application.routes.draw do
     end
   end
 
-  resources :inspections
+  resources :inspections do
+    collection do
+      get :main
+    end
+  end
 
-  resources :responses
+  resources :responses 
 
   resources :vehicles
 
