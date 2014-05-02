@@ -50,9 +50,9 @@ body {
     vertical-align:middle;
   }
 a,p,h1{
-  font-size: 3.5em;
-  line-height: 4em;
-  margin: 0.3em 0.2em 0.9em 0.2em;
+  font-size: 4em;
+  line-height: 2em;
+  margin-bottom: 0.9em;
 }
 .field textarea, 
 .field input[type=number],
