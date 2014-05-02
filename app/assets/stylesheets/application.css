@@ -45,21 +45,21 @@ body {
     font-size: 4em;
     line-height: 4.5em;
     margin: 0.9em 0.2em 0.9em 0.2em;
-    width: 9em;
+    width: 100%;
     vertical-align:middle;
   }
   textarea,input{
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
-    width: 9em;
+    width: 100%;
     vertical-align:middle;
   }
   td{ 
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
-    width: 9em;
+    width: 100%;
     vertical-align:middle;
   }
 
@@ -68,21 +68,21 @@ body {
     margin: 0.9em 0.2em 0.9em 0.2em;
     padding: 0.9em 0.2em 0.9em 0.2em;
     line-height: 4.5em;
-    width: 9em;
+    width: 100%;
     vertical-align:middle;
   }
   div
   {
     vertical-align: middle;
   }
-  input[type=submit] {
+}
+  input[type=submit], input[type=button], input[type=file] {
     padding: 0.1em 0.3em 0.1em 0.3em;
     font-size: 4em;
     line-height: 2em;
     border: 0;
     margin: 0;
   }
-}
 
 .center_text {
 	text-align: center;
