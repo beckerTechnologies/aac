@@ -71,6 +71,13 @@ input[type=submit] {
 	word-wrap: break-word;
 }
 
+.left_align {
+	text-align: left;
+}
+
+.no_background_color {
+	background-color: white;
+}
 
 /*----------------------------------------- Error -----------------------------------------*/
 
