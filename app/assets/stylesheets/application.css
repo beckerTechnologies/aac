@@ -33,11 +33,13 @@ body {
 textarea, input, label, button, h1, select, a, .section{
   font-size: 4em;
   padding: 0.5em 0.2em 0.5em 0.2em;
+  margin: 0.5em 0.2em 0.5em 0.2em;
   width: 9em;
 }
 label{
   font-size: 4em;
   padding: 0.5em 0.2em 0.5em 0.2em;
+  margin: 0.5em 0.2em 0.5em 0.2em;
 }
 
 input[type=submit] {
