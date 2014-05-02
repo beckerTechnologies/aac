@@ -64,7 +64,9 @@ p,h1{
     width: 100%;
     vertical-align:middle;
   }
-table tr td{ 
+table tr td,
+table th td
+{ 
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
@@ -90,7 +92,7 @@ table tr td{
   input[type=submit], input[type=button], input[type=file] {
     padding: 0.1em 0.3em 0.1em 0.3em;
     font-size: 4em;
-    line-height: 2em;
+    line-height: 4em;
     border: 0;
     margin: 0;
     width: 100%;
