@@ -50,10 +50,10 @@ body {
     width: 100%;
     vertical-align:middle;
   }
-a,p,h1{
-  font-size: 3.5em;
-  line-height: 4em;
-  margin: 0.3em 0.2em 0.9em 0.2em;
+p,h1{
+  font-size: 4em;
+  line-height: 2em;
+  margin-bottom: 0.9em;
 }
 .field textarea, 
 .field input[type=number],
@@ -65,11 +65,13 @@ a,p,h1{
     width: 100%;
     vertical-align:middle;
   }
-table tr td{ 
+table tr td,
+table th td
+{ 
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
-    width: 100%;
+    width: auto;
     vertical-align:middle;
   }
 
@@ -89,12 +91,14 @@ table tr td{
     vertical-align: middle;
   }
   input[type=submit], input[type=button], input[type=file] {
-    padding: 0.1em 0.3em 0.1em 0.3em;
-    font-size: 4em;
-    line-height: 2em;
+    font-size: 3em;
+    line-height: 3em;
     border: 0;
     margin: 0;
     width: 100%;
+    height: 3.2em;
+    margin: 1em 1em 1em 1em;
+    padding: 0.1em 0.3em 0.1em 0.3em;
   }
 
 .center_text {
