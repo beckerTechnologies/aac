@@ -45,7 +45,7 @@ class ResponsesController < ApplicationController
           @medium.filetype = params["medium_o"+@i.to_s].content_type;
           @medium.save
           @i = @i + 1
-          session[:debug] = session[:debug] + @medium.filename + "."
+          #session[:debug] = session[:debug] + @medium.filename + "."
         end
         if (session[:step]== Section.count)
           session[:step]= nil
