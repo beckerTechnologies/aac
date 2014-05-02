@@ -32,6 +32,7 @@ body {
 }
 .wrapper textarea,.wrapper input,.wrapper label,.wrapper button,.wrapper h1,.wrapper select,.wrapper a, .section{
   font-size: 4em;
+  line-height: 4.5em;
   margin: 0.9em 0.2em 0.9em 0.2em;
   width: 9em;
 }
