@@ -1,3 +1,107 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+
+ * {
+  font-family: georgia;
+}
+
+body {
+  background-color: #F0ECEB;
+  width: 100%;
+	text-align: center;
+}
+
+.wrapper {
+	width: 70%;
+	min-height: 70%;
+	border: 1px solid black;
+	margin: 0 auto 0 auto;
+	padding: 2% 5% 2% 5%;
+}
+.wrapper textarea,.wrapper input,.wrapper label,.wrapper button,.wrapper h1,.wrapper select,.wrapper a, .section{
+  font-size: 4em;
+  margin: 0.9em 0.2em 0.9em 0.2em;
+  width: 9em;
+}
+.wrapper label{
+  font-size: 4em;
+  margin: 0.9em 0.2em 0.9em 0.2em;
+  padding: 0.9em 0.2em 0.9em 0.2em;
+  line-height: 4.5em;
+  width: 9em;
+}
+.wrapper label{
+  font-size: 4em;
+  margin: 0.9em 0.2em 0.9em 0.2em;
+}
+
+input[type=submit] {
+  padding: 0.1em 0.3em 0.1em 0.3em;
+  font-size: 4em;
+  line-height: 2em;
+  border: 0;
+  margin: 0;
+}
+
+.center_text {
+	text-align: center;
+}
+
+.smaller_text {
+	font-size: 70%;
+}
+
+.bold_text {
+	font-weight: bold;
+}
+
+.margins_right_left {
+	margin: 0 5% 0 5%;
+}
+
+.pre_tag_style {
+	background-color: white;
+	font-family: georgia;
+	font-size: 100%;
+	word-wrap: break-word;
+}
+
+.left_align {
+	text-align: left;
+}
+
+.no_background_color {
+	background-color: white;
+}
+
+/*----------------------------------------- Error -----------------------------------------*/
+
+#error_explanation {
+  text-align: left;
+  font-size: 4em;
+  width: 50%;
+  margin: 0 auto;
+}
+#error_explanation li{
+  color: red;
+}
+.field_with_errors {
+  width: 50%;
+  margin: 0 auto;
+}
 .home_page_logo {
   text-align: center;
   width: 70%;
@@ -157,3 +261,108 @@ background-color: #772dbc;
 }
 
 
+/* line 5, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
+.centered {
+  text-align: center;
+  font-size: 2em;
+  line-height: 100%;
+}
+
+/* line 11, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
+.field {
+  margin: 2% 0 2% 0;
+}
+
+/* line 15, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
+.section {
+  line-height: 300%;
+}
+
+/* line 19, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
+.question {
+  line-height: 300%;
+}
+
+/* line 23, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
+textarea {
+  resize: none;
+}
+/* line 1, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: .9em;
+  line-height: 1em;
+}
+
+/* line 9, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: .9em;
+  line-height: 1em;
+}
+
+/* line 15, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+pre {
+  background-color: #eee;
+  padding: 0.625em;
+  font-size: 0.689em;
+}
+
+/* line 21, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+a {
+  color: #000;
+}
+/* line 23, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+a:visited {
+  color: #666;
+}
+/* line 26, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+a:hover {
+  color: #fff;
+  background-color: #000;
+}
+
+/* line 33, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+div.field, div.actions {
+  margin-bottom: 0.625em;
+}
+
+/* line 38, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+#notice {
+  color: green;
+}
+
+/* line 42, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation {
+  width: 28.125em;
+  border: 2px solid red;
+  padding: 0.438em;
+  padding-bottom: 0;
+  margin-bottom: 1.250em;
+  background-color: #f0f0f0;
+}
+/* line 55, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 0.313em 0.313em 0.313em 0.938em;
+  font-size: 0.750em;
+  margin: -0.438em;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+/* line 65, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
+#error_explanation ul li {
+  font-size: 0.750em;
+  list-style: square;
+}
