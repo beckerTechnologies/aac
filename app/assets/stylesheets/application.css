@@ -95,11 +95,6 @@ table th td
     padding: 0.1em 0.3em 0.1em 0.3em;
     margin-bottom: 2px;
   }
-  input[type=file] {
-    width: 100%;
-    text-align: center;
-    height: 2050px;
-  }
 
 
 .center_text {
