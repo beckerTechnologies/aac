@@ -2,20 +2,20 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.814em;
+  line-height: 1.125em;
 }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+  font-size: 0.814em;
+  line-height: 1.125em;
 }
 
 pre {
   background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
+  padding: 0.625em;
+  font-size: 0.689em;
 }
 
 a {
@@ -31,7 +31,7 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px;
+    margin-bottom: 0.625em;
   }
 }
 
@@ -46,24 +46,24 @@ div {
 }
 
 #error_explanation {
-  width: 450px;
+  width: 28.125em;
   border: 2px solid red;
-  padding: 7px;
+  padding: 0.438em;
   padding-bottom: 0;
-  margin-bottom: 20px;
+  margin-bottom: 1.250em;
   background-color: #f0f0f0;
   h2 {
     text-align: left;
     font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
+    padding: 0.313em 0.313em 0.313em 0.938em;
+    font-size: 0.750em;
+    margin: -0.438em;
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;
   }
   ul li {
-    font-size: 12px;
+    font-size: 0.750em;
     list-style: square;
   }
 }
