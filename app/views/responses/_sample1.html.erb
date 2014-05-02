@@ -13,7 +13,7 @@
     <% end %>
 
     <div class="field">
-      <div class='section'><%= (Section.find(session[:step]).heading).html_safe %></div>
+      <p><%= (Section.find(session[:step]).heading).html_safe %></p>
     </div>
     <%= f.hidden_field :inspection_id, value: session[:inspection_id] %>
     <%= f.hidden_field :section_id, value: session[:step]%>
