@@ -29,12 +29,21 @@ body {
 	border: 1px solid black;
 	margin: 0 auto 0 auto;
 	padding: 2% 5% 2% 5%;
+  vertical-align:middle;
 }
-.wrapper textarea,.wrapper input,.wrapper label,.wrapper button,.wrapper h1,.wrapper select,.wrapper a, .section{
+.wrapper button,.wrapper h1,.wrapper select,.wrapper a, .section{
   font-size: 4em;
   line-height: 4.5em;
   margin: 0.9em 0.2em 0.9em 0.2em;
   width: 9em;
+  vertical-align:middle;
+}
+.wrapper textarea,.wrapper input{
+  font-size: 2em;
+  line-height: 2.25em;
+  margin: 0.9em 0.2em 0.9em 0.2em;
+  width: 9em;
+  vertical-align:middle;
 }
 .wrapper label{
   font-size: 4em;
@@ -46,6 +55,11 @@ body {
 .wrapper label{
   font-size: 4em;
   margin: 0.9em 0.2em 0.9em 0.2em;
+}
+
+div
+{
+  vertical-align: middle;
 }
 
 input[type=submit] {
