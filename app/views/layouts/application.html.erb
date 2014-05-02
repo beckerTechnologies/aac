@@ -11,33 +11,31 @@
 </head>
 <body>
 
-	<div class="logged-in">
-		<% if user_signed_in? %>
-			Signed in as <SPAN id="top-username"> <%= current_user.email %> </SPAN>. Not you?
-			<%= link_to "Sign out", destroy_user_session_path %>
-		<% end %>
-	</div>
+  <div class="logged-in">
+    <% if user_signed_in? %>
+      Signed in as <SPAN id="top-username"> <%= current_user.email %> </SPAN>. Not you?
+      <%= link_to "Sign out", destroy_user_session_path %>
+    <% end %>
+  </div>
+  <div class="home_page_logo">
+    <img src="/assets/AAC-logo3.png" />
+  </div>
 
-	<div class="nav_bar">
-		<ul>
-			<li><a href="/dashboard/index">Home </a></li>
-			<li><a href="/inspections/main/">Inspections</a>
-				<ul>
-					<li><a href="/inspections/new">New Inspection</a> </li>
-					<li><a href="/inspections/">Resume Inspection</a></li>
-				</ul>
-			</li>
-			<li><a href="/inspections/">Search Reports</a> </li>
-			<li><a href="/dealers/">Dealers</a>
-				<ul>
-					<li><a href="/dealers/new">Add Dealer</a> </li>
-					<li><a href="/dealers/">All Dealers</a></li>
-				</ul>
-			</li>
-			<li><a href="">Contacts</a> </li>
-			<li><a href="">Forms and Contracts</a> </li>		
-		</ul>
-	</div>
+  <div class="menu-wrapper">
+    <ul class="menu">
+      <li class="item1"><a href="#">Navigation Menu</a>
+      <ul>
+        <li class="subitem1"><a href="/dashboard/index">Home </a></li>
+        <li><a href="/inspections/main/">Inspections</a></li>
+        <li class="subitem2"><a href="/inspections/">Search Reports</a> </li>
+        <li><a href="/dealers/">Dealers</a>
+        </li>
+        <li class="subitem3"><a href="">Contacts</a> </li>
+        <li class="subitem4"><a href="">Forms and Contracts</a> </li>		
+      </ul>
+      </li>
+    </ul>
+  </div>
 
 	<div class="wrapper">
 
@@ -51,6 +49,29 @@
 <%= yield %>
 
 	</div>
-
+  
+  <!--initiate accordion-->
+  <script type="text/javascript">
+    $(function() {
+    
+        var menu_ul = $('.menu > li > ul'),
+               menu_a  = $('.menu > li > a');
+        
+        menu_ul.hide();
+    
+        menu_a.click(function(e) {
+            e.preventDefault();
+            if(!$(this).hasClass('active')) {
+                menu_a.removeClass('active');
+                menu_ul.filter(':visible').slideUp('normal');
+                $(this).addClass('active').next().stop(true,true).slideDown('normal');
+            } else {
+                $(this).removeClass('active');
+                $(this).next().stop(true,true).slideUp('normal');
+            }
+        });
+    
+    });
+  </script>
 </body>
 </html>
