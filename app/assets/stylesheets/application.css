@@ -49,7 +49,7 @@ body {
     width: 100%;
     vertical-align:middle;
   }
-a,p,h1{
+p,h1{
   font-size: 4em;
   line-height: 2em;
   margin-bottom: 0.9em;
@@ -68,7 +68,7 @@ table tr td{
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
-    width: 100%;
+    width: auto;
     vertical-align:middle;
   }
 
