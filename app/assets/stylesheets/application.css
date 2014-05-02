@@ -31,37 +31,35 @@ body {
 	padding: 2% 5% 2% 5%;
   vertical-align:middle;
 }
-.wrapper button,.wrapper h1,.wrapper select,.wrapper a, .section{
-  font-size: 4em;
-  line-height: 4.5em;
-  margin: 0.9em 0.2em 0.9em 0.2em;
-  width: 9em;
-  vertical-align:middle;
+.wrapper 
+{ 
+  button, h1,select,a, .section{
+    font-size: 4em;
+    line-height: 4.5em;
+    margin: 0.9em 0.2em 0.9em 0.2em;
+    width: 9em;
+    vertical-align:middle;
+  }
+  .wrapper textarea,.wrapper input{
+    font-size: 2em;
+    line-height: 2.25em;
+    margin: 0.9em 0.2em 0.9em 0.2em;
+    width: 9em;
+    vertical-align:middle;
+  }
+  .wrapper label{
+    font-size: 4em;
+    margin: 0.9em 0.2em 0.9em 0.2em;
+    padding: 0.9em 0.2em 0.9em 0.2em;
+    line-height: 4.5em;
+    width: 9em;
+    vertical-align:middle;
+  }
+  div
+  {
+    vertical-align: middle;
+  }
 }
-.wrapper textarea,.wrapper input{
-  font-size: 2em;
-  line-height: 2.25em;
-  margin: 0.9em 0.2em 0.9em 0.2em;
-  width: 9em;
-  vertical-align:middle;
-}
-.wrapper label{
-  font-size: 4em;
-  margin: 0.9em 0.2em 0.9em 0.2em;
-  padding: 0.9em 0.2em 0.9em 0.2em;
-  line-height: 4.5em;
-  width: 9em;
-}
-.wrapper label{
-  font-size: 4em;
-  margin: 0.9em 0.2em 0.9em 0.2em;
-}
-
-div
-{
-  vertical-align: middle;
-}
-
 input[type=submit] {
   padding: 0.1em 0.3em 0.1em 0.3em;
   font-size: 4em;
