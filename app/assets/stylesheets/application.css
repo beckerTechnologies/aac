@@ -41,6 +41,7 @@ body {
 .field h1,
 .field select,
 .field a, 
+.field p, 
 .section{
     font-size: 4em;
     line-height: 4.5em;
@@ -54,12 +55,11 @@ body {
 {
     font-size: 2em;
     line-height: 2.25em;
-    margin: 0.9em 0.2em 0.9em 0.2em;
+    margin: 0.3em 0.2em 0.9em 0.2em;
     width: 100%;
     vertical-align:middle;
   }
-.field 
-  td{ 
+table tr td{ 
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
@@ -70,8 +70,8 @@ body {
 .field 
   label{
     font-size: 4em;
-    margin: 0.9em 0.2em 0.9em 0.2em;
-    padding: 0.9em 0.2em 0.9em 0.2em;
+    margin: 0.9em 0.2em 0.2em 0.2em;
+    padding: 0.9em 0.2em 0.1em 0.2em;
     line-height: 4.5em;
     width: 100%;
     vertical-align:middle;
