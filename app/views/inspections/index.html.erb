@@ -1,7 +1,7 @@
 <h1>Listing inspections</h1>
 
 <%= form_tag("/inspections", :method => "get") do %>
-  <p>
+  <p class="search">
     <%= text_field_tag :search, params[:search] %>
     <%= submit_tag "Search", :name => nil %>
   </p>

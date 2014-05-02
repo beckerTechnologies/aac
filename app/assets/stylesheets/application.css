@@ -22,7 +22,14 @@ body {
   width: 100%;
 	text-align: center;
 }
-
+.search input[type=text],
+.search input[type=submit]{
+  width: 50%;
+  height: auto;
+  line-height: 3em;
+  font-size: 3em;
+	margin: 1em 1em 1em 1em;
+}
 .wrapper {
 	width: 70%;
 	min-height: 70%;
@@ -31,30 +38,25 @@ body {
 	padding: 2% 5% 2% 5%;
   vertical-align:middle;
 }
-.wrapper 
-{ 
-  button{
-    font-size: 4em;
-    line-height: 4.5em;
-    margin: 0.9em 0.2em 0.9em 0.2em;
-    width: 9em;
-    vertical-align:middle;
-  }
-
-  h1,select,a, .section{
+.field h1,
+.field select,
+.field a, 
+.section{
     font-size: 4em;
     line-height: 4.5em;
     margin: 0.9em 0.2em 0.9em 0.2em;
     width: 100%;
     vertical-align:middle;
   }
-  textarea,input{
+.field textarea, 
+.field input{
     font-size: 2em;
     line-height: 2.25em;
     margin: 0.9em 0.2em 0.9em 0.2em;
     width: 100%;
     vertical-align:middle;
   }
+.field 
   td{ 
     font-size: 2em;
     line-height: 2.25em;
@@ -63,6 +65,7 @@ body {
     vertical-align:middle;
   }
 
+.field 
   label{
     font-size: 4em;
     margin: 0.9em 0.2em 0.9em 0.2em;
@@ -71,17 +74,18 @@ body {
     width: 100%;
     vertical-align:middle;
   }
+.field 
   div
   {
     vertical-align: middle;
   }
-}
   input[type=submit], input[type=button], input[type=file] {
     padding: 0.1em 0.3em 0.1em 0.3em;
     font-size: 4em;
     line-height: 2em;
     border: 0;
     margin: 0;
+    width: 100%;
   }
 
 .center_text {
