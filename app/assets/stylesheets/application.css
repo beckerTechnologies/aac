@@ -33,6 +33,7 @@ body {
 textarea, input, label, button, h1, select, a, .section{
   font-size: 4em;
   padding: 0.3em 0.2em 0.3em 0.2em;
+  width: 9em;
 }
 label{
   font-size: 4em;
