@@ -217,4 +217,16 @@ table th td
   .logged-in {
     font-size: 150%;
   }
+
+  .reports_page {
+    font-size: 200%;
+  }
+
+  .reports_page input{
+    font-size: 80%;
+    margin: 5% auto 5% auto;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
+  }
+
 }

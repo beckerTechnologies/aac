@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem "paperclip", "~> 4.1"
 gem 'aws-sdk', '~> 1.5.7'
 

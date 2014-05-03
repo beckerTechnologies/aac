@@ -1,4 +1,4 @@
-<div class="sign_in">
+<div class="reports_page">
 <h1>Listing inspections</h1>
 
 <%= form_tag("/inspections", :method => "get") do %>
@@ -28,5 +28,5 @@
 
 <br>
 
-<%= link_to 'New Inspection', new_inspection_path %>
+<%= button_to 'New Inspection', new_inspection_path, :method => :get %>
 </div>
