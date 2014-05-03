@@ -183,16 +183,16 @@ input[type=radio] {
       background-color: buttonface;
   }
 
-.pdf_image img{
-  border: 1px solid black;
-  width: 95%;
-  height: auto;
-}
-  
-table {
-  width: 100%;
-  table-layout: fixed;
-}
+  .pdf_image img{
+    border: 1px solid black;
+    width: 95%;
+    height: auto;
+  }
+    
+  table {
+    width: 100%;
+    table-layout: fixed;
+  }
 
 
 /*-----##########################################################################################-----*/
