@@ -175,7 +175,9 @@ table th td
   }
 
   .sign_in h2{
-    font-size: 200%;
+    font-size: 150%;
+    text-align: center;
+    word-wrap: normal;
     margin-bottom: 5%;
   }
 
