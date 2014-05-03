@@ -298,6 +298,7 @@ input[type=radio] {
     width: 90%;
     border: 2px solid #772dbc;
     border-radius: 10px;
+    position: relative;
   }
 
   .form label {
