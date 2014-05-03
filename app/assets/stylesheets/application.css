@@ -285,7 +285,7 @@ input[type=radio] {
   }
 
   .form input[type=radio] {  
-    margin: 1em 1em 1em 0; 
+     
     transform: scale(3, 3); 
     -moz-transform: scale(3, 3); 
     -ms-transform: scale(3, 3); 
