@@ -32,6 +32,6 @@
   <%= @dealer.zip %>
 </p>
 
-<%= link_to 'Edit', edit_dealer_path(@dealer) %> |
-<%= link_to 'Back', dealers_path %>
+<%= button_to 'Edit', edit_dealer_path(@dealer), :method => :get %>
+<%= button_to 'Back', dealers_path, :method => :get %>
 </div>
