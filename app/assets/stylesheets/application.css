@@ -373,6 +373,8 @@ input[type=radio] {
       border: 2px solid #772dbc;
       background-color: buttonface;
       vertical-align: middle;
+      display: block;
+      text-align: center;
   }
 
   #error_explanation {
