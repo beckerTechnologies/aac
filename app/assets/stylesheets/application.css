@@ -160,7 +160,7 @@ table th td
   .wrapper {
     width: 80%;
     min-height: 800px;
-    margin: 8% auto 2% auto;
+    margin: 8% auto 4% auto;
   }
 
   .sign_in {
@@ -234,6 +234,12 @@ table th td
     margin: 5% auto 5% auto;
     border: 2px solid #772dbc;
     border-radius: 10px;
+  }
+
+  .search input[type=text],
+  .search input[type=submit]{
+    font-size: 100%;
+    width: 60%;
   }
 
 }
