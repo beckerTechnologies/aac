@@ -77,7 +77,7 @@ class ReportsController < ApplicationController
                   :layout => 'nill.html',
                   :encoding => 'UTF-8',
                   :page_size => 'letter',
-                  :footer => { :right => '[page]', :spacing => 0 }
+                  :footer => { :center => '[page]', :spacing => 0 }
           end
     end      
   end
