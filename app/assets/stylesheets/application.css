@@ -294,6 +294,11 @@ input[type=radio] {
     vertical-align: middle;
   }
 
+  .form input[type="date"] {
+    width: 50%;
+    font-size: 150%;
+  }
+
   .form label {
     line-height: 1em;
     margin: 2% auto 2% auto;
