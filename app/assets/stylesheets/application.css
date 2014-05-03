@@ -160,3 +160,17 @@ table th td
   width: 90%;
   margin-bottom: 5%;
 }
+
+.devise_form {
+  font-size: 200%;
+}
+
+.devise_form input{
+  font-size: 100%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.devise_form a:link{
+  font-size: 70%;
+}

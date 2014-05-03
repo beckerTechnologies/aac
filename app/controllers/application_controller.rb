@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   require 'nokogiri'
+  layout "home"
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
