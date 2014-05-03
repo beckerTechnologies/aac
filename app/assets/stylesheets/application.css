@@ -269,7 +269,7 @@ input[type=radio] {
 
   .form p{
     line-height: 1.5em;
-    margin: 2% auto 2% auto;
+    margin: 5% auto 5% auto;
   }
 
   .form input{
@@ -310,8 +310,8 @@ input[type=radio] {
 
   #error_explanation {
     text-align: left;
-    font-size: 100%;
-    width: 150%;
+    font-size: 200%;
+    width: 100%;
     margin: 0 auto;
     line-height: 1.3em;
   }
