@@ -180,6 +180,7 @@ input[type=radio] {
       border: 2px solid #772dbc;
       padding: 1%;
       letter-spacing: 3px;
+      background-color: buttonface;
   }
 
 
@@ -364,13 +365,13 @@ input[type=radio] {
   }
 
   .file-input-wrapper input[type="file"]{
-      width: 80%;
-      font-size: 200%;
+      width: 90%;
+      font-size: 150%;
       overflow: hidden;
       position: relative;
       margin: 5% auto 5% auto;
       border: 2px solid #772dbc;
-      padding: 1%;
+      background-color: buttonface;
   }
 
   #error_explanation {
