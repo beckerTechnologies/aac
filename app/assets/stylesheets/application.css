@@ -184,7 +184,7 @@ table th td
   }
 
   .sign_in input{
-    margin: 10% auto 10% auto;
+    margin: 5% auto 10% auto;
     font-size: 120%;
     width: 99%;
     border: 2px solid #772dbc;
@@ -192,7 +192,7 @@ table th td
   }
 
   .sign_in select{
-    margin: 10% auto 10% auto;
+    margin: 5% auto 10% auto;
     font-size: 120%;
     width: 99%;
     border: 2px solid #772dbc;
