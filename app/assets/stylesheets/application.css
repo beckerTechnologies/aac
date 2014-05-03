@@ -147,7 +147,7 @@ table th td
 /*----------------------------------------- Changes -----------------------------------------*/
 
 .sign_in {
-  font-size: 300%;
+  font-size: 200%;
 }
 
 .sign_in h1{
@@ -157,7 +157,7 @@ table th td
 .sign_in input{
   margin-top: 10%;
   font-size: 50%;
-  width: 90%;
+  width: 80%;
   margin-bottom: 5%;
 }
 
