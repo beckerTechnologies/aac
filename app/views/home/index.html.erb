@@ -1,6 +1,10 @@
+<div class="sign_in">
 <h1>Albuquerque Automobiles Certifications</h1>
 
+<br><br><br>
+
 <div class="sign_in">
-<p> Already a member? <%= button_to "Sign in", new_user_session_path, :method => :get %> </p>
-<p> Sign UP? <%= button_to "Sign up", new_user_registration_path, :method => :get %> </p>
+<%= button_to "Sign in", new_user_session_path, :method => :get %>
+
+<%= button_to "Sign up", new_user_registration_path, :method => :get %>
 </div>

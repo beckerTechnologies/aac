@@ -147,11 +147,15 @@ table th td
 /*----------------------------------------- Changes -----------------------------------------*/
 
 .sign_in {
-  margin-top: 30%;
+  font-size: 200%;
+}
+
+.sign_in h1{
   font-size: 300%;
 }
 
 .sign_in input{
+  margin-top: 10%;
   font-size: 100%;
   width: 90%;
   margin-bottom: 5%;
