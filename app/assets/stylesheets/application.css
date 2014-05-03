@@ -155,13 +155,14 @@ table th td
 
   .wrapper {
     width: 80%;
-    min-height: 90%;
+    height: 90%;
     margin-left: auto;
     margin-right: auto;
   }
 
   .sign_in {
     font-size: 200%;
+    text-align: justify;
   }
 
   .sign_in image{
@@ -171,6 +172,11 @@ table th td
 
   .sign_in h1{
     font-size: 300%;
+  }
+
+  .sign_in h2{
+    font-size: 200%;
+    margin-bottom: 5%;
   }
 
   .sign_in input{
