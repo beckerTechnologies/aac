@@ -147,26 +147,26 @@ table th td
 /*----------------------------------------- Changes -----------------------------------------*/
 
 .sign_in {
-  font-size: 200%;
+  font-size: 100%;
 }
 
 .sign_in h1{
-  font-size: 300%;
+  font-size: 100%;
 }
 
 .sign_in input{
   margin-top: 10%;
-  font-size: 100%;
+  font-size: 80%;
   width: 90%;
   margin-bottom: 5%;
 }
 
 .devise_form {
-  font-size: 300%;
+  font-size: 100%;
 }
 
 .devise_form input{
-  font-size: 100%;
+  font-size: 80%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
@@ -177,7 +177,7 @@ table th td
 }
 
 .logged-in {
-  font-size: 150%;
+  font-size: 50%;
 }
 
 
