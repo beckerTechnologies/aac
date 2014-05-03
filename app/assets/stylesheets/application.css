@@ -293,6 +293,13 @@ input[type=radio] {
     vertical-align: middle;
   }
 
+  .form input[type=file] { 
+    margin: 2% auto 2% auto;
+    width: 99%;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
+  }
+  
   .form label {
     line-height: 1em;
     margin: 2% auto 2% auto;
