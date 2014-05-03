@@ -1,9 +1,8 @@
-<h1>Listing inspections</h1>
 
+<h1>What would you like to do?</h1>
 
-
-<%= link_to 'New Inspection', new_inspection_path %>
+<%= button_to 'New Inspection', new_inspection_path, :method => :get %>
 
 <br/>
 
-<%= link_to 'Resume Inspection', inspections_path %>
+<%= button_to 'Resume Inspection', inspections_path, :method => :get %>

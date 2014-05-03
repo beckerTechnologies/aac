@@ -33,7 +33,7 @@ body {
 .wrapper {
 	width: 70%;
 	min-height: 70%;
-	border: 1px solid black;
+	border: 1px solid #772dbc;
 	margin: 0 auto 0 auto;
 	padding: 2% 5% 2% 5%;
   vertical-align:middle;
@@ -144,47 +144,6 @@ table th td
   margin: 0 auto;
 }
 
-/*----------------------------------------- Changes -----------------------------------------*/
-
-.sign_in {
-  font-size: 100%;
-}
-
-.sign_in h1{
-  font-size: 150%;
-}
-
-.sign_in input{
-  margin-top: 10%;
-  font-size: 50%;
-  width: 60%;
-  margin-bottom: 5%;
-}
-
-.devise_form {
-  font-size: 100%;
-}
-
-.devise_form input{
-  font-size: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.devise_form a{
-  font-size: 100%;
-  margin-bottom: 20%;
-}
-
-.logged-in {
-  font-size: 100%;
-}
-
-
-
-
-
-
 
 
 
@@ -203,6 +162,11 @@ table th td
 
   .sign_in {
     font-size: 200%;
+  }
+
+  .sign_in image{
+    width: 25%;
+    height: auto;
   }
 
   .sign_in h1{
