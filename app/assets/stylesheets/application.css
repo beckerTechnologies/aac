@@ -268,7 +268,8 @@ input[type=radio] {
   }
 
   .form p{
-    line-height: 1.2em;
+    line-height: 1.5em;
+    margin: 2% auto 2% auto;
   }
 
   .form input{
@@ -286,9 +287,10 @@ input[type=radio] {
   }
 
   .form input[type=radio] {  
-    width: 6em;
-    height: 6em;
+    width: 8em;
+    height: 8em;
     margin: 0 3% 0 3%;
+    vertical-align: middle;
   }
 
   .form label {
@@ -309,8 +311,9 @@ input[type=radio] {
   #error_explanation {
     text-align: left;
     font-size: 100%;
-    width: 100%;
+    width: 150%;
     margin: 0 auto;
+    line-height: 1.3em;
   }
   #error_explanation li{
     color: red;
