@@ -222,11 +222,12 @@ table th td
   .devise_form input{
     font-size: 100%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    width: 90%;
+    margin-bottom: 10%;
   }
 
   .devise_form a{
-    font-size: 100%;
+    font-size: 80%;
     margin-bottom: 20%;
   }
 
