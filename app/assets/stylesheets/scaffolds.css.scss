@@ -46,7 +46,7 @@ div {
 }
 
 #error_explanation {
-  width: 28.125em;
+  width: 90%;
   border: 2px solid red;
   padding: 0.438em;
   padding-bottom: 0;
@@ -63,7 +63,8 @@ div {
     color: #fff;
   }
   ul li {
-    font-size: 0.750em;
+    font-size: 1em;
     list-style: square;
+    padding: 3%;
   }
 }
