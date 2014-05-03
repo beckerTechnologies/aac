@@ -365,7 +365,7 @@ input[type=radio] {
 
   .file-input-wrapper input[type="file"]{
       width: 80%;
-      font-size: 300%;
+      font-size: 200%;
       overflow: hidden;
       position: relative;
       margin: 5% auto 5% auto;
