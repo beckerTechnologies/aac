@@ -222,11 +222,11 @@ table th td
 
   .logged-in {
     font-size: 150%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
   }
 
   .reports_page {
-    font-size: 200%;
+    font-size: 300%;
   }
 
   .reports_page input{
@@ -240,6 +240,7 @@ table th td
   .search input[type=submit]{
     font-size: 100%;
     width: 60%;
+    margin-bottom: 3%;
   }
 
 }

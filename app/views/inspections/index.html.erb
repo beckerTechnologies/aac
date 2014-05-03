@@ -1,10 +1,10 @@
 <div class="reports_page">
-<h1>Listing inspections</h1>
+<p class="bold_text">All Inspections</p>
 
 <%= form_tag("/inspections", :method => "get") do %>
   <p class="search">
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Search VIN", :name => nil %>
   </p>
 <% end %>
 
