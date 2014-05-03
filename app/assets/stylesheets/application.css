@@ -189,7 +189,7 @@ table th td
     margin: 10% auto 10% auto;
     font-size: 150%;
     width: 90%;
-    border: 1px solid #772dbc;
+    border: 2px solid #772dbc;
     border-radius: 10px;
   }
 
@@ -205,7 +205,7 @@ table th td
   .devise_form input{
     font-size: 150%;
     margin: 5% auto 10% auto;
-    border: 1px solid #772dbc;
+    border: 2px solid #772dbc;
     border-radius: 10px;
   }
 
