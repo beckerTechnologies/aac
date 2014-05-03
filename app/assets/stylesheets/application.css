@@ -204,6 +204,12 @@ table th td
     margin-bottom: 20%;
   }
 
+  .sign_in td:first-child {
+    width: 20%;
+    font-weight: bold;
+    font-size: 130%;
+  }
+
   .devise_form {
     font-size: 200%;
   }
