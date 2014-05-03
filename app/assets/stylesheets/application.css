@@ -109,6 +109,10 @@ table th td
 	font-weight: bold;
 }
 
+.bigger_text {
+  font-size: 200%;
+}
+
 .margins_right_left {
 	margin: 0 5% 0 5%;
 }
