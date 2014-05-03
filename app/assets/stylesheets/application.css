@@ -298,6 +298,10 @@ input[type=radio] {
     margin: 2% auto 2% auto;
   }
 
+  .form .field {
+    margin: 5% auto 5% auto;
+  }
+
   .form .ui-menu-item {
     font-size: 200%;
   }
@@ -312,6 +316,7 @@ input[type=radio] {
     text-align: left;
     font-size: 200%;
     width: 100%;
+    word-wrap: normal;
     margin: 0 auto;
     line-height: 1.3em;
   }
