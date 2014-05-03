@@ -33,7 +33,7 @@ body {
 .wrapper {
 	width: 70%;
 	min-height: 70%;
-	border: 1px solid #772dbc;
+	border: 3px solid #772dbc;
 	margin: 6% auto 0 auto;
 	padding: 2% 5% 2% 5%;
   vertical-align:middle;
