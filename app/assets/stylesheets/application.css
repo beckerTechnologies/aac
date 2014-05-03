@@ -175,3 +175,22 @@ table th td
   font-size: 40%;
   margin-bottom: 20%;
 }
+
+.logged-in {
+  font-size: 150%;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-device-width: 480px) {
+  body {
+    width: 480px;
+  }
+}
