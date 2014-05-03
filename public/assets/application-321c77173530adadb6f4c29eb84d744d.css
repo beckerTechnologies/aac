@@ -34,8 +34,8 @@ body {
 .wrapper {
 	width: 70%;
 	min-height: 70%;
-	border: 1px solid black;
-	margin: 0 auto 0 auto;
+	border: 3px solid #772dbc;
+	margin: 6% auto 0 auto;
 	padding: 2% 5% 2% 5%;
   vertical-align:middle;
 }
@@ -110,6 +110,10 @@ table th td
 	font-weight: bold;
 }
 
+.bigger_text {
+  font-size: 200%;
+}
+
 .margins_right_left {
 	margin: 0 5% 0 5%;
 }
@@ -145,50 +149,40 @@ table th td
   margin: 0 auto;
 }
 
-/*----------------------------------------- Changes -----------------------------------------*/
 
-.sign_in {
-  font-size: 100%;
+.ui-menu-item {
+  font-size: 200%;
 }
 
-.sign_in h1{
-  font-size: 150%;
-}
+input[type=radio] {  
+    width: 3em;
+    height: 3em;
+  } 
 
-.sign_in input{
-  margin-top: 10%;
-  font-size: 50%;
-  width: 60%;
-  margin-bottom: 5%;
-}
+  .logged-in a{
+    background-color: #B78BE2;
+    padding: 0.5%;
+    border-radius: 10px;
+    font-size: 120%;
+  }
 
-.devise_form {
-  font-size: 100%;
-}
-
-.devise_form input{
-  font-size: 50%;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.devise_form a{
-  font-size: 100%;
-  margin-bottom: 20%;
-}
-
-.logged-in {
-  font-size: 100%;
-}
+  .logged-in a:hover{
+    background-color: #616975;
+    padding: 0.5%;
+    color: white;
+  }
 
 
 
+/*-----##########################################################################################-----*/
+/*-----##########################################################################################-----*/
+/*-----##########################################################################################-----*/
+/*-----##########################################################################################-----*/
+/*-----##########################################################################################-----*/
+/*-----##########################################################################################-----*/
 
 
-
-
-
-
+  
 
 @media screen and (max-device-width: 480px) {
   body {
@@ -197,23 +191,61 @@ table th td
 
   .wrapper {
     width: 80%;
-    margin-left: auto;
-    margin-right: auto;
+    min-height: 800px;
+    margin: 8% auto 8% auto;
+    padding: 5% 4% 5% 4%;
+  }
+
+  .notice, .alert {
+    font-size: 250%;
   }
 
   .sign_in {
     font-size: 200%;
   }
 
+  .sign_in image{
+    width: 30%;
+    height: auto;
+  }
+
   .sign_in h1{
     font-size: 300%;
   }
 
+  .sign_in h2{
+    font-size: 150%;
+    text-align: center;
+    word-wrap: normal;
+    margin-bottom: 5%;
+  }
+
   .sign_in input{
-    margin-top: 10%;
-    font-size: 100%;
-    width: 90%;
-    margin-bottom: 10%;
+    margin: 5% auto 10% auto;
+    font-size: 120%;
+    width: 99%;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
+  }
+
+  .sign_in select{
+    margin: 5% auto 10% auto;
+    font-size: 120%;
+    width: 99%;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
+  }
+
+  .sign_in a{
+    font-size: 80%;
+    margin-bottom: 20%;
+  }
+
+  .sign_in td:first-child {
+    width: 20%;
+    font-weight: bold;
+    font-size: 200%;
+    color: #772dbc;
   }
 
   .devise_form {
@@ -221,10 +253,10 @@ table th td
   }
 
   .devise_form input{
-    font-size: 100%;
-    margin-top: 5%;
-    width: 90%;
-    margin-bottom: 10%;
+    font-size: 120%;
+    margin: 5% auto 10% auto;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
   }
 
   .devise_form a{
@@ -233,14 +265,116 @@ table th td
   }
 
   .logged-in {
+    font-size: 150%;
+    margin-bottom: 3%;
+    margin-top: 2%;
+  }
+
+  #top-username {
+    font-weight: bold;
+    color: #772dbc;
+  }
+
+  .logged-in a{
+    background-color: #B78BE2;
+    padding: 0.5%;
+    border-radius: 10px;
+    font-size: 120%;
+  }
+
+  .logged-in a:hover{
+    background-color: #616975;
+    padding: 0.5%;
+    color: white;
+  }
+
+  .search input[type=text],
+  .search input[type=submit]{
     font-size: 100%;
+    width: 60%;
+    margin-bottom: 3%;
+  }
+
+  .form {
+    font-size: 150%;
+    line-height: 1em;
+  }
+
+  .form p{
+    line-height: 1.5em;
+    margin: 5% auto 5% auto;
+  }
+
+  .form input{
+    margin: 2% auto 2% auto;
+    width: 99%;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
+  }
+
+  .form select{
+    margin: 2% auto 2% auto;
+    width: 99%;
+    border: 2px solid #772dbc;
+    border-radius: 10px;
+  }
+
+  .form input[type=radio] {  
+    width: 8em;
+    height: 8em;
+    margin: 0 3% 0 3%;
+    vertical-align: middle;
+  }
+
+  .form input[type="date"] {
+    width: 70%;
+    font-size: 200%;
+  }
+
+  .form label {
+    line-height: 1em;
+    margin: 2% auto 2% auto;
+  }
+
+  .form .field {
+    margin: 8% auto 8% auto;
+  }
+
+  .form .ui-menu-item {
+    font-size: 200%;
+  }
+
+  .form a{
+    font-size: 300%;
+  }
+
+  .form small{
+    font-size: 200%;
+    line-height: 1.5em;
+  }
+
+  #error_explanation {
+    text-align: left;
+    font-size: 200%;
+    width: 50%;
+    word-wrap: normal;
+    overflow: hidden;
+    margin: 0 auto;
+    line-height: 1.5em;
+  }
+  #error_explanation li{
+    color: red;
+  }
+  .field_with_errors {
+    width: 50%;
+    margin: 0 auto;
   }
 }
 .home_page_logo {
   float: left;
   width: 25%;
   height: auto;
-  margin: 1% auto 1% auto ;
+  margin: 0 auto 1% auto ;
   clear: both;
 }
 
@@ -397,45 +531,48 @@ background-color: #772dbc;
 }
 
 
-/* line 5, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/responses.css.scss */
+/* line 5, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
 .centered {
   text-align: center;
 }
 
-/* line 9, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/responses.css.scss */
+/* line 9, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
 textarea {
   resize: none;
 }
 
-/* line 13, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/responses.css.scss */
+/* line 13, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
 .file-input-wrapper {
-  width: 200px;
-  height: 40px;
+  width: 80%;
+  height: 80px;
   overflow: hidden;
   position: relative;
+  margin: 5% auto 5% auto;
+  border: 2px solid #772dbc;
+  border-radius: 45px;
 }
 
-/* line 19, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/responses.css.scss */
+/* line 22, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
 .file-input-wrapper > input[type="file"] {
   font-size: 200px;
-  position: absolute;
   top: 0;
   right: 0;
   opacity: 0;
 }
 
-/* line 26, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/responses.css.scss */
+/* line 28, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
 .file-input-wrapper > .btn-file-input {
-  display: inline-block;
-  width: 200px;
-  height: 40px;
+  display: block;
+  font-size: 250%;
+  width: 100%;
+  height: 80px;
 }
 
-/* line 31, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/responses.css.scss */
+/* line 34, /Users/saqib/ruby/aac/app/assets/stylesheets/responses.css.scss */
 .file-input-wrapper:hover > .btn-file-input {
   background-color: #aaa;
 }
-/* line 1, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 1, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 body {
   background-color: #fff;
   color: #333;
@@ -444,52 +581,52 @@ body {
   line-height: 1em;
 }
 
-/* line 9, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 9, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: .9em;
   line-height: 1em;
 }
 
-/* line 15, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 15, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 pre {
   background-color: #eee;
   padding: 0.625em;
   font-size: 0.689em;
 }
 
-/* line 21, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 21, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 a {
   color: #000;
 }
-/* line 23, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 23, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 a:visited {
   color: #666;
 }
-/* line 26, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 26, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 a:hover {
   color: #fff;
   background-color: #000;
 }
 
-/* line 33, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 33, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 div.field, div.actions {
   margin-bottom: 0.625em;
 }
 
-/* line 38, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 38, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 #notice {
   color: green;
 }
 
-/* line 42, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 42, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
 
-/* line 48, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 48, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 #error_explanation {
   width: 28.125em;
   border: 2px solid red;
@@ -498,7 +635,7 @@ div.field, div.actions {
   margin-bottom: 1.250em;
   background-color: #f0f0f0;
 }
-/* line 55, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 55, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 #error_explanation h2 {
   text-align: left;
   font-weight: bold;
@@ -509,7 +646,7 @@ div.field, div.actions {
   background-color: #c00;
   color: #fff;
 }
-/* line 65, /home/wisam/Documents/AAC/aac/app/assets/stylesheets/scaffolds.css.scss */
+/* line 65, /Users/saqib/ruby/aac/app/assets/stylesheets/scaffolds.css.scss */
 #error_explanation ul li {
   font-size: 0.750em;
   list-style: square;
