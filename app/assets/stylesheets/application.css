@@ -166,7 +166,7 @@ input[type=radio] {
   .wrapper {
     width: 80%;
     min-height: 800px;
-    margin: 8% auto 4% auto;
+    margin: 8% auto 8% auto;
   }
 
   .sign_in {
