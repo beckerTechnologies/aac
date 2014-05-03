@@ -154,12 +154,8 @@ table th td
 }
 
 input[type=radio] {  
-    margin: 1em 1em 1em 0; 
-    transform: scale(3, 3); 
-    -moz-transform: scale(3, 3); 
-    -ms-transform: scale(3, 3); 
-    -webkit-transform: scale(3, 3); 
-    -o-transform: scale(3, 3); 
+    width: 3em;
+    height: 3em;
   }
 
 @media screen and (max-device-width: 480px) {
@@ -286,12 +282,8 @@ input[type=radio] {
   }
 
   .form input[type=radio] {  
-     margin: 1% 1% 1% 0;
-    transform: scale(3, 3); 
-    -moz-transform: scale(3, 3); 
-    -ms-transform: scale(3, 3); 
-    -webkit-transform: scale(3, 3); 
-    -o-transform: scale(3, 3); 
+     width: 3em;
+    height: 3em;
   }
 
   .form label {
@@ -306,5 +298,20 @@ input[type=radio] {
   .form a{
     font-size: 80%;
     margin-bottom: 20%;
+  }
+
+
+  #error_explanation {
+    text-align: left;
+    font-size: 100%;
+    width: 90%;
+    margin: 0 auto;
+  }
+  #error_explanation li{
+    color: red;
+  }
+  .field_with_errors {
+    width: 50%;
+    margin: 0 auto;
   }
 }
