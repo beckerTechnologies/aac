@@ -311,6 +311,9 @@ input[type=radio] {
     margin-bottom: 20%;
   }
 
+  .form small{
+    font-size: 100%;
+  }
 
   #error_explanation {
     text-align: left;
