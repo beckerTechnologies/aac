@@ -1,1 +1,7 @@
 # instructions
+
+#commands to set the heroku bucket on amazon s3
+
+heroku config:set AWS_ACCESS_KEY_ID=AKIAIABIVBKQHJ3Q6DDA AWS_SECRET_ACCESS_KEY=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
+
+heroku config:set S3_BUCKET_NAME=aacbeta
