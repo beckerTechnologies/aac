@@ -23,7 +23,7 @@ Address  <span class="bold_text"><%= @dealer.address %></span>           City  <
 <h4>2. Vehicle Information: (N.M.A.C. 12.2.14.11(D-F)):</h4>
 <p>
 <pre class="pre_tag_style">
-Year: <span class="bold_text"><%= @vehicle.year %></span> Make: <span class="bold_text"><%= @vehicle.make %></span>  Model: <span class="bold_text"><%= @vehicle.model %></span>  Stock #:<span class="bold_text"><%= @vehicle.stock_number.to_s.rjust(12, '0') %></span>  Vin #:<span class="bold_text"><%= @vehicle.vin %></span>
+Year: <span class="bold_text"><%= @vehicle.year %></span> Make: <span class="bold_text"><%= @vehicle.make %></span>  Model: <span class="bold_text"><%= @vehicle.model %></span>  Stock #:<span class="bold_text"><%= @vehicle.stock_number.to_s.rjust(6, '0') %></span>  Vin #:<span class="bold_text"><%= @vehicle.vin %></span>
 
 Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>                             Interior Color:  <span class="bold_text"><%= @vehicle.interior_color %></span>
 </pre>
@@ -32,9 +32,25 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 
 <h4>3. Odometer Reading (N.M.A.C. 12.2.14.11(G)):</h4>
 <p>
+<% if @res[0] != nil %>
 <pre class="pre_tag_style"><%= @res[0].section.question %> <span class="bold_text"><%= @res[0].details %></span>              Not Including Actual Miles <span class="bold_text"><%= @res[0].auxilary_details %></span>
 </pre>
+<% end %>
 </p>
+
+<% @res.each do |r|%>
+	<% if r.section_id == 2 %>
+	  <table>
+		<tr>
+		<% Medium.all.where(:response_id => r.id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+		</tr>
+	  </table>
+	<% end %>
+<% end %>
 
 
 <h4>8. Estimated Total Cost of Repair (N.M.A.C. 12.2.14.11(H)):</h4>
@@ -46,9 +62,11 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <p class="smaller_text">DIRECTIONS: For the following, a “yes” and “no” box should be checked for each item. If “yes” is checked, identify the safety issues with particularity (N.M.A.C. 12.2.14.11(I))</p>
 
 <p>
+<% if @res[27] != nil %>
 <pre class="pre_tag_style">
 <% if @res[27].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[27].details %></span>
 </pre>
+<% end %>
 </p>
 
 
@@ -57,9 +75,11 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <p class="smaller_text">DIRECTIONS: For the following, a “yes” and “no” box should be checked for each item. If “yes” is checked, identify the frame damage with particularity (N.M.A.C. 12.2.14.11(J))</p>
 
 <p>
+<% if @res[28] != nil %>
 <pre class="pre_tag_style">
 <% if @res[28].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[28].details %></span>
 </pre>
+<% end %>
 </p>
 
 
@@ -73,33 +93,77 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <p>(a) differences in paint color or texture</p>
 
 <p>
+<% if @res[2] != nil %>
 <pre class="pre_tag_style">
 <% if @res[2].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[2].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[2].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(b) mismatched sizes of metallic sparkle in the paint</p>
 
 <p>
+<% if @res[3] != nil %>
 <pre class="pre_tag_style">
 <% if @res[3].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[3].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[3].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(c) embedded dirt or deep scratches in the top coat of the paint</p>
 
 <p>
+<% if @res[4] != nil %>
 <pre class="pre_tag_style">
 <% if @res[4].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[4].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[4].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(d) uneven paint thickness</p>
 
 <p>
+<% if @res[5] != nil %>
 <pre class="pre_tag_style">
 <% if @res[5].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[5].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[5].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>
@@ -110,81 +174,191 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <p>(a) uneven gaps between sheet metal panels</p>
 
 <p>
+<% if @res[6] != nil %>
 <pre class="pre_tag_style">
 <% if @res[6].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[6].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[6].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(b) differences between the headlamps</p>
 
 <p>
+<% if @res[7] != nil %>
 <pre class="pre_tag_style">
 <% if @res[7].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[7].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[7].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(c) paint overspray on moldings and trim</p>
 
 <p>
+<% if @res[8] != nil %>
 <pre class="pre_tag_style">
 <% if @res[8].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[8].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[8].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(d) paint tape edges in the jams</p>
 
 <p>
+<% if @res[9] != nil %>
 <pre class="pre_tag_style">
 <% if @res[9].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[9].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[9].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(e) paint chipped off of bolt heads</p>
 
 <p>
+<% if @res[10] != nil %>
 <pre class="pre_tag_style">
 <% if @res[10].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[10].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[10].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(f) paint missing around bolt heads or bolts not centered in the bolt hole</p>
 
 <p>
+<% if @res[11] != nil %>
 <pre class="pre_tag_style">
 <% if @res[11].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[11].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[11].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(g) hammer damage</p>
 
 <p>
+<% if @res[12] != nil %>
 <pre class="pre_tag_style">
 <% if @res[12].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[12].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[12].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(h) holes drilled and plugged in jams or shell of the motor vehicle</p>
 
 <p>
+<% if @res[13] != nil %>
 <pre class="pre_tag_style">
 <% if @res[13].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[13].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[13].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(i) damage inside the trunk or under the spare tire</p>
 
 <p>
+<% if @res[14] != nil %>
 <pre class="pre_tag_style">
 <% if @res[14].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[14].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[14].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(j) signs of corrosion or lack of corrosion protection</p>
 
 <p>
+<% if @res[15] != nil %>
 <pre class="pre_tag_style">
 <% if @res[15].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[15].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[15].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>
@@ -195,57 +369,134 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <p>(a) pinched weld flange underneath the motor vehicle</p>
 
 <p>
+<% if @res[16] != nil %>
 <pre class="pre_tag_style">
 <% if @res[16].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[16].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[16].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(b) weld sites</p>
 
 <p>
+<% if @res[17] != nil %>
 <pre class="pre_tag_style">
 <% if @res[17].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[17].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[17].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(c) signs of repair to unibody structural parts</p>
 
 <p>
+<% if @res[18] != nil %>
 <pre class="pre_tag_style">
 <% if @res[18].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[18].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[18].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(d) signs of buckles or non-OEM welding repair to the unibody structural parts</p>
 
 <p>
+<% if @res[19] != nil %>
 <pre class="pre_tag_style">
 <% if @res[19].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[19].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[19].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(e) signs of corrosion or lack of corrosion protection</p>
 
 <p>
+<% if @res[20] != nil %>
 <pre class="pre_tag_style">
 <% if @res[20].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[20].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[20].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(f) signs of any other alteration or repair having been performed to the chassis</p>
 
 <p>
+<% if @res[21] != nil %>
 <pre class="pre_tag_style">
 <% if @res[21].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[21].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[21].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>(g) odometer alteration or repair</p>
 
 <p>
+<% if @res[22] != nil %>
 <pre class="pre_tag_style">
 <% if @res[22].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[22].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[22].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <p>
@@ -254,40 +505,86 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <h5>(4) signs of differences and inconsistencies with the motor vehicle’s caulking and seam sealer (N.M.A.C. 12.2.14.11(L)(4))</h5>
 
 <p>
+<% if @res[23] != nil %>
 <pre class="pre_tag_style">
 <% if @res[23].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[23].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[23].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 
 <h5>(5) signs of tampering with motor vehicle’s identification tags (N.M.A.C. 12.2.14.11(L)(5))</h5>
 
 <p>
+<% if @res[24] != nil %>
 <pre class="pre_tag_style">
 <% if @res[24].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[24].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[24].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <h5>(6) signs of motor vehicle parts labeled “R-DOT” (N.M.A.C. 12.2.14.11(L)(6))</h5>
 
 <p>
+<% if @res[25] != nil %>
 <pre class="pre_tag_style">
 <% if @res[25].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[25].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[25].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
 <h5>(7) signs of any type of repairs not consistent with I-CAR collision repair standards or equivalent (N.M.A.C.12.2.14.11(L)(7))</h5>
 
 <p>
+<% if @res[26] != nil %>
 <pre class="pre_tag_style">
 <% if @res[26].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[26].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[26].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
+<% end %>
 </p>
 
-
+<% if @res[29] != nil %>
 <pre class="pre_tag_style">
 <h4>8. Estimated Total Cost for Repairs and Alterations:         <%= @res[29].details %></h4></pre>
-
+<% else %>
+<h4>8. Estimated Total Cost for Repairs and Alterations:</h4>
+<% end %>
 <p class="smaller_text">DIRECTIONS: Above, estimate the total cost of alterations or repairs for this vehicle to be restored to I-Car standards of equivalent industry standards using industry accepted reverse engineering protocols and original equipment manufacturer “OEM” replacement parts; OR flat rate manual costs as indicated by a nationally recognized manual commonly used in the industry of auto repair. (N.M.A.C. 12.2.14.7). The total should then be entered in the box above AND the box titled ESTIMATED TOTAL COST OF REPAIR in the first section of this report.</p>
 
 
@@ -295,6 +592,7 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <h4>9. Inspection Information (N.M.A.C. 12.2.14.11(M-N)):</h4>
 
 <p>
+<% if @res[30] != nil %>
 <pre class="pre_tag_style">Date of Inspection            <span class="bold_text"><%= @res[30].details %></span>
 Calculation and total cost for inspection _________________________________
 
@@ -303,6 +601,16 @@ Calculation and total cost for inspection _________________________________
                                                                 _________________________________
 
                                              Total Cost:   _________________________________</pre>
+<% else %>
+<pre class="pre_tag_style">Date of Inspection            <span class="bold_text"></span>
+Calculation and total cost for inspection _________________________________
+
+                                                                _________________________________
+
+                                                                _________________________________
+
+                                             Total Cost:   _________________________________</pre>
+<% end %>                                           
 </p>
 
 
