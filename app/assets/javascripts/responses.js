@@ -1,10 +1,10 @@
-/*
 $(function(){
-
-//<div class="file-input-wrapper">
- // <button class="btn-file-input">Custom Upload</button>
-  //<input type="file" name="file" />
-//</div>
+/*
+<div class="file-input-wrapper">
+  <button class="btn-file-input">Custom Upload</button>
+  <input type="file" name="file" />
+</div>
+*/
   var count = parseInt($('#count').val());
   var pic = document.getElementById('pictures');
   for (var i = 0; i < count; i++ ){
@@ -21,10 +21,10 @@ $(function(){
       id:'medium_o'+i+'',
       name:'medium_o'+i+''
     });
+    //d1.appendChild(b1);
     d1.appendChild(pn);
-    d1.appendChild(b1);
     pic.appendChild(d1);
-    
+
     //pic.appendChild(p1);
     //pic.appendChild(pn);
     //pic.appendChild(p2);
@@ -47,9 +47,8 @@ $(function(){
       id:'medium_o'+i+'',
       name:'medium_o'+i+''
     });
-    d1.appendChild(b1);
+    //d1.appendChild(b1);
     d1.appendChild(pn);
     pic.appendChild(d1);
   });
-}); 
-*/
+});
