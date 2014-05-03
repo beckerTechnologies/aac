@@ -143,3 +143,16 @@ table th td
   width: 50%;
   margin: 0 auto;
 }
+
+/*----------------------------------------- Changes -----------------------------------------*/
+
+.sign_in {
+  margin-top: 10%;
+  font-size: 300%;
+}
+
+.sign_in input{
+  font-size: 70%;
+  width: 80%;
+  margin-bottom: 5%;
+}
