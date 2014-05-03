@@ -149,6 +149,9 @@ table th td
 }
 
 
+.ui-menu-item {
+  font-size: 200%;
+}
 
 
 
@@ -279,7 +282,7 @@ table th td
     margin: 2% auto 2% auto;
   }
 
-  .form .ui-menu .ui-menu-item a {
+  .form .ui-menu-item {
     font-size: 200%;
   }
 
