@@ -2,6 +2,13 @@
 <p class="bold_text bigger_text">Welcome to the Albuquerque Auto Certs web portal!</p>
 
 <br><br>
+<%= image_tag @user.avatar.url %>
+<%= image_tag @user.avatar.url(:medium) %>
+<%= image_tag @user.avatar.url(:thumb) %>
+<br/>
+<%= image_tag @user1.avatar.url %>
+<%= image_tag @user1.avatar.url(:medium) %>
+<%= image_tag @user1.avatar.url(:thumb) %>
 
 <p class="bigger_text"> 
 This is the internal website for Albuquerque Auto Certs for inspectors, dealers, and other interested parties to access internal inspection information and create an efficient and user-friendly used auto inspection experience.
