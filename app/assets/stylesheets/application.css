@@ -267,6 +267,10 @@ input[type=radio] {
     line-height: 1em;
   }
 
+  .form p{
+    line-height: 1em;
+  }
+
   .form input{
     margin: 2% auto 2% auto;
     width: 99%;
@@ -282,8 +286,9 @@ input[type=radio] {
   }
 
   .form input[type=radio] {  
-     width: 3em;
-    height: 3em;
+    width: 5em;
+    height: 5em;
+    margin: 0 2% 0 2%;
   }
 
   .form label {
