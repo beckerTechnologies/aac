@@ -165,7 +165,7 @@ table th td
   }
 
   .sign_in image{
-    width: 25%;
+    width: 30%;
     height: auto;
   }
 
@@ -178,6 +178,8 @@ table th td
     font-size: 100%;
     width: 90%;
     margin-bottom: 10%;
+    border: 1px solid #772dbc;
+    border-radius: 10px;
   }
 
   .sign_in a{
