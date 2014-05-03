@@ -205,22 +205,22 @@ table th td
   }
 
   .sign_in h1{
-    font-size: 250%;
+    font-size: 300%;
   }
 
   .sign_in input{
     margin-top: 10%;
     font-size: 100%;
     width: 90%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
 
   .devise_form {
-    font-size: 100%;
+    font-size: 200%;
   }
 
   .devise_form input{
-    font-size: 50%;
+    font-size: 100%;
     margin-top: 5%;
     margin-bottom: 5%;
   }
