@@ -199,4 +199,38 @@ table th td
     margin-left: auto;
     margin-right: auto;
   }
+
+  .sign_in {
+    font-size: 100%;
+  }
+
+  .sign_in h1{
+    font-size: 150%;
+  }
+
+  .sign_in input{
+    margin-top: 10%;
+    font-size: 50%;
+    width: 60%;
+    margin-bottom: 5%;
+  }
+
+  .devise_form {
+    font-size: 100%;
+  }
+
+  .devise_form input{
+    font-size: 50%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  .devise_form a{
+    font-size: 100%;
+    margin-bottom: 20%;
+  }
+
+  .logged-in {
+    font-size: 100%;
+  }
 }
