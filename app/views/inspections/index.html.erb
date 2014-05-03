@@ -19,7 +19,7 @@
   <tbody>
     <% @inspections.each do |inspection| %>
       <tr>
-        <td><%= inspection.vehicle.vin %></td>
+        <td class="smaller_text"><%= inspection.vehicle.vin %></td>
         <td><%= link_to 'Show Report', {:controller => "reports", :action => "pdf", :id => inspection.id, :format => :pdf} %></td>
       </tr>
     <% end %>
