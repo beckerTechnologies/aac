@@ -15,7 +15,7 @@
     <% end %>
 
     <div class="field">
-      <p><%= (Section.find(session[:step]).heading).html_safe %></p>
+      <p class="bold_text"><%= (Section.find(session[:step]).heading).html_safe %></p>
       <p><%= Section.find(session[:step]).question %></p>
       <small> <%= Section.find(session[:step]).directions %> </small>
     </div>
