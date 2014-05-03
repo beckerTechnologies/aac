@@ -299,7 +299,7 @@ input[type=radio] {
   }
 
   .form .field {
-    margin: 7% auto 7% auto;
+    margin: 8% auto 8% auto;
   }
 
   .form .ui-menu-item {
@@ -315,11 +315,11 @@ input[type=radio] {
   #error_explanation {
     text-align: left;
     font-size: 200%;
-    width: 100%;
+    width: 90%;
     word-wrap: normal;
-    overflow: auto;
+    overflow: hidden;
     margin: 0 auto;
-    line-height: 1.3em;
+    line-height: 1.5em;
   }
   #error_explanation li{
     color: red;
