@@ -40,9 +40,7 @@ class ResponsesController < ApplicationController
         while params["medium_o"+@i.to_s]
           @medium = Medium.new
           @medium.response_id = @response.id
-          @medium.filedata = params["medium_o"+@i.to_s].read;
-          @medium.filename = params["medium_o"+@i.to_s].original_filename;
-          @medium.filetype = params["medium_o"+@i.to_s].content_type;
+          @medium.avatar = params["medium_o"+@i.to_s];
           @medium.save
           @i = @i + 1
           #session[:debug] = session[:debug] + @medium.filename + "."

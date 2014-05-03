@@ -39,9 +39,10 @@ ActiveRecord::Schema.define(version: 20140423033944) do
     t.integer  "response_id"
     t.text     "label"
     t.text     "description"
-    t.binary   "filedata"
-    t.text     "filename"
-    t.text     "filetype"
+    t.string   "avatar_file_name"
+    t.string   "avatar_content_type"
+    t.integer  "avatar_file_size"
+    t.datetime "avatar_updated_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
