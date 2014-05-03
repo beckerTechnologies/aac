@@ -261,14 +261,14 @@ table th td
   }
 
   .form input{
-    margin: 2% auto 2% auto;
+    margin: 0 auto 0 auto;
     width: 99%;
     border: 2px solid #772dbc;
     border-radius: 10px;
   }
 
   .form select{
-    margin: 2% auto 2% auto;
+    margin: 0 auto 0 auto;
     width: 99%;
     border: 2px solid #772dbc;
     border-radius: 10px;
@@ -276,7 +276,10 @@ table th td
 
   .form label {
     line-height: 1em;
-    margin: 2% auto 2% auto;
+  }
+
+  .form .ui-menu .ui-menu-item a {
+    font-size: 100%;
   }
 
   .form a{
