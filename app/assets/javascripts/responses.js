@@ -21,8 +21,8 @@ $(function(){
       id:'medium_o'+i+'',
       name:'medium_o'+i+''
     });
-    //$$d1.appendChild(b1);
     d1.appendChild(pn);
+    d1.appendChild(b1);
     pic.appendChild(d1);
     
     //pic.appendChild(p1);
