@@ -34,7 +34,7 @@ body {
 	width: 70%;
 	min-height: 70%;
 	border: 1px solid #772dbc;
-	margin: 0 auto 0 auto;
+	margin: 6% auto 0 auto;
 	padding: 2% 5% 2% 5%;
   vertical-align:middle;
 }
@@ -160,8 +160,7 @@ table th td
   .wrapper {
     width: 80%;
     min-height: 800px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 6% auto 0 auto;
   }
 
   .sign_in {
