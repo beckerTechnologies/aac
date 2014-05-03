@@ -156,7 +156,7 @@ table th td
 input[type=radio] {  
     width: 3em;
     height: 3em;
-  }
+  } 
 
 @media screen and (max-device-width: 480px) {
   body {
@@ -291,14 +291,6 @@ input[type=radio] {
     height: 8em;
     margin: 0 3% 0 3%;
     vertical-align: middle;
-  }
-
-  input[type=file] { 
-    margin: 2% auto 2% auto;
-    width: 90%;
-    border: 2px solid #772dbc;
-    border-radius: 10px;
-    position: relative;
   }
 
   .form label {
