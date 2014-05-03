@@ -21,7 +21,7 @@ $(function(){
       id:'medium_o'+i+'',
       name:'medium_o'+i+''
     });
-    d1.appendChild(b1);
+    //$$d1.appendChild(b1);
     d1.appendChild(pn);
     pic.appendChild(d1);
     
