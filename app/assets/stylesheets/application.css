@@ -326,8 +326,9 @@ input[type=radio] {
   }
 
   .form a{
-    font-size: 200%;
+    font-size: 300%;
     margin-bottom: 20%;
+    margin-top: 20%;
   }
 
   .form small{
