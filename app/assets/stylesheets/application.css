@@ -313,6 +313,7 @@ input[type=radio] {
 
   .form small{
     font-size: 200%;
+    line-height: 1.5em;
   }
 
   #error_explanation {
