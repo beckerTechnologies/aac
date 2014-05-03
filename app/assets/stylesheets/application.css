@@ -156,7 +156,7 @@ table th td
 
 .sign_in input{
   margin-top: 10%;
-  font-size: 90%;
+  font-size: 50%;
   width: 90%;
   margin-bottom: 5%;
 }
@@ -166,7 +166,7 @@ table th td
 }
 
 .devise_form input{
-  font-size: 90%;
+  font-size: 50%;
   margin-top: 5%;
   margin-bottom: 5%;
 }
