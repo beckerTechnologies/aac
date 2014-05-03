@@ -216,6 +216,11 @@ table th td
     margin-bottom: 10%;
   }
 
+  .sign_in a{
+    font-size: 80%;
+    margin-bottom: 20%;
+  }
+
   .devise_form {
     font-size: 200%;
   }
