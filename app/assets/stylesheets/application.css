@@ -172,14 +172,13 @@ input[type=radio] {
   }
 
   .file-input-wrapper input[type="file"]{
-      width: 60%;
-      font-size: 200%;
+      width: 80%;
+      font-size: 300%;
       overflow: hidden;
       position: relative;
       margin: 5% auto 5% auto;
       border: 2px solid #772dbc;
       padding: 1%;
-      letter-spacing: 3px;
   }
 
 
