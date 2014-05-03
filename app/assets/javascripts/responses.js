@@ -1,10 +1,10 @@
-$(function(){
 /*
-<div class="file-input-wrapper">
-  <button class="btn-file-input">Custom Upload</button>
-  <input type="file" name="file" />
-</div>
-*/
+$(function(){
+
+//<div class="file-input-wrapper">
+ // <button class="btn-file-input">Custom Upload</button>
+  //<input type="file" name="file" />
+//</div>
   var count = parseInt($('#count').val());
   var pic = document.getElementById('pictures');
   for (var i = 0; i < count; i++ ){
@@ -52,3 +52,4 @@ $(function(){
     pic.appendChild(d1);
   });
 }); 
+*/
