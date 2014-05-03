@@ -162,7 +162,7 @@ table th td
 }
 
 .devise_form {
-  font-size: 200%;
+  font-size: 300%;
 }
 
 .devise_form input{
@@ -173,4 +173,5 @@ table th td
 
 .devise_form a:link{
   font-size: 70%;
+  margin-bottom: 10%;
 }
