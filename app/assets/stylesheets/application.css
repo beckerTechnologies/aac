@@ -315,7 +315,7 @@ input[type=radio] {
   #error_explanation {
     text-align: left;
     font-size: 200%;
-    width: 90%;
+    width: 50%;
     word-wrap: normal;
     overflow: hidden;
     margin: 0 auto;
