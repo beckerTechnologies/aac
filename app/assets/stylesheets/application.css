@@ -275,7 +275,7 @@ table th td
   }
 
   .form label {
-    line-height: 0;
+    line-height: 1em;
     margin: 2% auto 2% auto;
   }
 
