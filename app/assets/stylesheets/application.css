@@ -193,4 +193,8 @@ table th td
   body {
     width: 480px;
   }
+
+  .wrapper {
+    width: 90%;
+  }
 }
