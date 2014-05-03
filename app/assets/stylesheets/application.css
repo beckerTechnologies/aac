@@ -284,7 +284,6 @@ input[type=radio] {
     width: 99%;
     border: 2px solid #772dbc;
     border-radius: 10px;
-    font-size: 100%;
   }
 
   .form input[type=radio] {  
@@ -295,8 +294,8 @@ input[type=radio] {
   }
 
   .form input[type="date"] {
-    width: 50%;
-    font-size: 150%;
+    width: 70%;
+    font-size: 200%;
   }
 
   .form label {
