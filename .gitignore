@@ -16,4 +16,4 @@
 /tmp
 
 # paper clip dev env temp files. 
-public/system/media/.
+/public/system/media/
