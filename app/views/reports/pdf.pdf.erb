@@ -99,7 +99,7 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[2].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[2].details %></span>
 </pre>
-	<table>
+	<!-- <table>
 	<tr>
 		<% Medium.all.where(:response_id => 146).each do |m|%>	
 			<td>
@@ -109,7 +109,7 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 			</td>
 		<% end %>
 	</tr>
-	</table>
+	</table> -->
 <% end %>
 </p>
 
