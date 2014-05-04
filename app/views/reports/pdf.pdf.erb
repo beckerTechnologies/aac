@@ -40,11 +40,12 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 
 <% @res.each do |r|%>
 	<% if r.section_id == 2 %>
+	<h4> Pictures: </h4>
 	  <table>
 		<tr>
-		<% Medium.all.where(:response_id => r.id).each do |m|%>	
+		<% Medium.all.where(:response_id => r[1].id).each do |m|%>	
 			<td>
-			<% if Medium.all.where(:response_id => @res[2].id).count == 1 %>
+			<% if Medium.all.where(:response_id => @res[1].id).count == 1 %>
 			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
 			<% else %>
 			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
