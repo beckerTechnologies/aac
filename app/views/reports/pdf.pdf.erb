@@ -44,8 +44,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 		<tr>
 		<% Medium.all.where(:response_id => r.id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[2].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -103,8 +105,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[2].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url%></div>
+			<% if Medium.all.where(:response_id => @res[2].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -124,8 +128,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[3].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[3].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -145,8 +151,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[4].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[4].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -166,8 +174,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[5].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[5].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -192,8 +202,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[6].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[6].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -213,8 +225,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[7].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[7].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -234,8 +248,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[8].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[8].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -255,8 +271,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[9].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[9].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -276,8 +294,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[10].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[10].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -297,8 +317,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[11].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[11].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -318,8 +340,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[12].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[12].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -339,8 +363,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[13].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[13].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -360,8 +386,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[14].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[14].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -381,8 +409,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[15].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[15].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -407,8 +437,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[16].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[16].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -428,8 +460,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[17].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[17].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -449,8 +483,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[18].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[18].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -470,8 +506,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[19].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[19].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -491,8 +529,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[20].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[20].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -512,8 +552,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[21].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[21].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -533,8 +575,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[22].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[22].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -557,8 +601,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[23].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[23].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -579,8 +625,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[24].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[24].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -600,8 +648,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[25].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[25].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>
@@ -621,8 +671,10 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 	<tr>
 		<% Medium.all.where(:response_id => @res[26].id).each do |m|%>	
 			<td>
-			<% if m.avatar != nil %>
-			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			<% if Medium.all.where(:response_id => @res[26].id).count == 1 %>
+			<div class="pdf_image_1"><%= image_tag m.avatar.url(:medium)%></div>
+			<% else %>
+			<div class="pdf_image_2"><%= image_tag m.avatar.url(:medium)%></div>
 			<% end %>
 			</td>
 		<% end %>

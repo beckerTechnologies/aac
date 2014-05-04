@@ -183,7 +183,13 @@ input[type=radio] {
       background-color: buttonface;
   }
 
-  .pdf_image img{
+  .pdf_image_1 img{
+    border: 1px solid black;
+    width: 30%;
+    height: auto;
+  }
+
+  .pdf_image_2 img{
     border: 1px solid black;
     width: 95%;
     height: auto;
