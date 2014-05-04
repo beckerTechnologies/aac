@@ -101,7 +101,7 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 </pre>
 	<table>
 	<tr>
-		<% Medium.all.where(:response_id => @res[2].id).each do |m|%>	
+		<% Medium.all.where(:response_id => 139).each do |m|%>	
 			<td>
 			<% if m.avatar != nil %>
 			<div class="pdf_image"><%= wicked_pdf_image_tag m.avatar.url(:medium)%></div>
