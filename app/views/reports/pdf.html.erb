@@ -38,27 +38,21 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <% end %>
 </p>
 
-<p> ---------------------------------------------------- </p>
-
 <% @res.each do |r|%>
-
 	<% if r.section_id == 2 %>
-
-		<table>
+	  <table>
 		<tr>
-		<% Medium.all.where(:response_id => r.id).each do |m|%>
-		
-			
-			<td><div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div></td>
-			
+		<% Medium.all.where(:response_id => r.id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
 		<% end %>
 		</tr>
-		</table>
-
+	  </table>
 	<% end %>
 <% end %>
 
-<p> ---------------------------------------------------- </p>
+
 <h4>8. Estimated Total Cost of Repair (N.M.A.C. 12.2.14.11(H)):</h4>
 <p class="smaller_text">DIRECTIONS: Skip until step 8. See below.</p>
 
@@ -103,6 +97,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[2].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[2].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[2].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -113,6 +116,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[3].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[3].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[3].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -123,6 +135,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[4].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[4].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[4].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -133,6 +154,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[5].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[5].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[5].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -148,6 +178,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[6].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[6].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[6].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -158,6 +197,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[7].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[7].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[7].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -168,6 +216,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[8].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[8].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[8].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -178,6 +235,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[9].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[9].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[9].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -188,6 +254,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[10].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[10].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[10].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -198,6 +273,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[11].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[11].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[11].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -208,6 +292,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[12].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[12].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[12].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -218,6 +311,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[13].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[13].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[13].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -228,6 +330,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[14].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[14].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[14].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -238,6 +349,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[15].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[15].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[15].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -253,6 +373,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[16].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[16].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[16].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -263,6 +392,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[17].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[17].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[17].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -273,6 +411,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[18].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[18].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[18].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -283,6 +430,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[19].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[19].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[19].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -293,6 +449,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[20].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[20].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[20].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -303,6 +468,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[21].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[21].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[21].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -313,6 +487,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[22].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[22].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[22].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -326,6 +509,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[23].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[23].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[23].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -337,6 +529,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[24].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[24].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[24].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -347,6 +548,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[25].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[25].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[25].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
@@ -357,6 +567,15 @@ Exterior Color:  <span class="bold_text"><%= @vehicle.exterior_color %></span>  
 <pre class="pre_tag_style">
 <% if @res[26].check == 1%><input type="checkbox"> No <input type="checkbox" checked> Yes <% else %> <input type="checkbox" checked> No <input type="checkbox"> Yes <% end %>       <span class="bold_text"><%= @res[26].details %></span>
 </pre>
+	<table>
+	<tr>
+		<% Medium.all.where(:response_id => @res[26].id).each do |m|%>	
+			<td>
+			<div class="pdf_image"><%= image_tag m.avatar.url(:medium)%></div>
+			</td>
+		<% end %>
+	</tr>
+	</table>
 <% end %>
 </p>
 
