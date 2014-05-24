@@ -12,11 +12,24 @@
  *= require_tree .
  */
 
+/*---------- container for layout/app to separate logo and menu. ----------------------*/
+.container {
+    zoom: 1; /* IE6&7 */
+}
 
+.container:before,
+.container:after {
+    content: "";
+    display: table;
+}
+
+.container:after {
+    clear: both;
+}
  * {
   font-family: georgia;
 }
-
+/*-------------------------------------------------------------------------------------*/
 body {
   background-color: #F0ECEB;
   width: 100%;
