@@ -15,7 +15,7 @@
   float: left;
   width: 30%;
   height: auto;
-  margin: 0 auto 1% auto ;
+  margin: 5% auto; 
   clear: both;
 }
 
@@ -37,7 +37,7 @@ ul, ul ul {
 .menu-wrapper {
   float: right;
   width: 70%;
-  margin: 5% auto;
+  margin: 2% auto;
   font-size: 1.5em;
 }
 .menu {
