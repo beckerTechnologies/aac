@@ -1,5 +1,5 @@
 <div class="sign_in">
-<p class="bold_text">All Inspections</p>
+<h2>All Inspections</h2>
 
 <%= form_tag("/inspections", :method => "get") do %>
   <p class="search">
@@ -8,6 +8,7 @@
   </p>
 <% end %>
 
+<div class="table_css">
 <table>
   <thead>
     <tr>
@@ -25,6 +26,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
 <br>
 

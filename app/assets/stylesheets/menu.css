@@ -1,8 +1,8 @@
 .home_page_logo {
   float: left;
-  width: 25%;
+  width: 20%;
   height: auto;
-  margin: 0 auto 1% auto ;
+  margin: 0 auto 0 auto ;
   clear: both;
 }
 
@@ -49,8 +49,8 @@ ul, ul ul {
   -moz-box-shadow: inset 0px 1px 0px 0px #878e98;
   box-shadow: inset 0px 1px 0px 0px #878e98;
   width: 100%;
-  height: 2.75em;
-  line-height: 2.75em;
+  height: 2em;
+  line-height: 2em;
   display: block;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -63,9 +63,9 @@ ul, ul ul {
   background: #fff;
   border-bottom: 1px solid #efeff0;
   width: 100%;
-  height: 2.75em;
-  line-height: 2.75em;
-  text-indent: 2.75em;
+  height: 2em;
+  line-height: 2em;
+  text-indent: 2em;
   display: block;
   position: relative;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
