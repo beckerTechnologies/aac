@@ -619,13 +619,13 @@ Calculation and total cost for inspection _________________________________
 
 <p>
 <pre class="pre_tag_style">
-Name of the business or individual who conducted the inspection <span class="bold_text"><%= current_user.name %></span>
+Name of the business or individual who conducted the inspection <span class="bold_text"><%= @user.name %></span>
 
 Name and address of the business or individual who conducted the inspection:
 
-Address <span class="bold_text"><%= current_user.address %></span>                City <span class="bold_text"><%= current_user.city %></span>         State <span class="bold_text"><%= current_user.state %></span>            Zip <span class="bold_text"><%= current_user.zip %></span>
+Address <span class="bold_text"><%= @user.address %></span>                City <span class="bold_text"><%= @user.city %></span>         State <span class="bold_text"><%= @user.state %></span>            Zip <span class="bold_text"><%= @user.zip %></span>
 
-Telephone number of the business or individual who conducted the inspection <span class="bold_text"><%= current_user.phone_number %></span> 
+Telephone number of the business or individual who conducted the inspection <span class="bold_text"><%= @user.phone_number %></span> 
 
 
 REPRESENTATIONS:

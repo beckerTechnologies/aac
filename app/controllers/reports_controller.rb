@@ -65,6 +65,7 @@ class ReportsController < ApplicationController
   def pdf
     @sections = Section.all
     @inspection = Inspection.find(params[:id])
+    @user = User.find(@inspection.user_id)
     @dealer = Dealer.find_by id: @inspection.dealer_id
     @vehicle = Vehicle.find_by id: @inspection.vehicle_id
     @response = Response.find_by inspection_id: @inspection.id
